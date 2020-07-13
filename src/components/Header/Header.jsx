@@ -7,7 +7,7 @@ import {
   Link,
 } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useClasses = makeStyles((theme) => ({
   selfBoard: {
     fontFamily: 'Galada, Roboto, Helvetica, sans-serif',
   },
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
-  const classes = useStyles();
+  const classes = useClasses();
 
   return (
     <div>
@@ -61,7 +61,7 @@ const Header = () => {
             </Typography>
           </Link>
           <Link color="textPrimary" underline="none" href="/login">
-            <Typography variant="h4">Log In</Typography>
+            <Typography variant="h4">Sign in</Typography>
           </Link>
         </Toolbar>
       </AppBar>
