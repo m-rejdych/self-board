@@ -5,6 +5,8 @@ import {
   Toolbar,
   Typography,
   Link,
+  Slide,
+  useScrollTrigger,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -23,11 +25,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const HideOnScroll = (props) => {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+};
+
+const Header = (props) => {
   const classes = useStyles();
 
   return (
-    <div>
+    <HideOnScroll {...props}>
       <AppBar>
         <Toolbar>
           <Link
@@ -65,7 +78,7 @@ const Header = () => {
           </Link>
         </Toolbar>
       </AppBar>
-    </div>
+    </HideOnScroll>
   );
 };
 

@@ -1,11 +1,13 @@
-import React from 'react';
-import { makeStyles, TextField, IconButton } from '@material-ui/core';
+import React, { Fragment } from 'react';
+import { makeStyles, TextField, IconButton, Divider } from '@material-ui/core';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
+import Todo from './Todo';
+
 const useStyles = makeStyles((theme) => ({
-  root: {
+  form: {
     '& .MuiTextField-root': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(2),
     },
     display: 'flex',
     justifyContent: 'space-between',
@@ -19,12 +21,23 @@ const Todos = () => {
   const classes = useStyles();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField label="New Todo" type="text" />
-      <IconButton>
-        <AddBoxIcon color="secondary" className={classes.icon} />
-      </IconButton>
-    </form>
+    <Fragment>
+      <form className={classes.form} noValidate autoComplete="off">
+        <TextField label="New Todo" type="text" />
+        <IconButton>
+          <AddBoxIcon color="primary" className={classes.icon} />
+        </IconButton>
+      </form>
+      <Divider />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+      <Todo />
+    </Fragment>
   );
 };
 

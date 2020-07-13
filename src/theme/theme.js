@@ -7,6 +7,9 @@ const theme = createMuiTheme({
     secondary: pink,
     type: 'dark',
   },
+  typography: {
+    fontFamily: 'Poppins, Roboto, Helvetica, sans-serif',
+  },
 });
 
 export default theme;

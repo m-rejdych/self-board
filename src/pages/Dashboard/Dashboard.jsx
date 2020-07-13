@@ -1,21 +1,27 @@
 import React from 'react';
-import { Container, Grid, Paper, makeStyles, Divider } from '@material-ui/core';
+import { Container, Grid, Paper, makeStyles } from '@material-ui/core';
 
 import Todos from '../../components/Todos';
 
 const useClasses = makeStyles((theme) => ({
   root: {
     position: 'relative',
-    top: theme.spacing(10),
+    top: 80,
+    height: 'calc(100% - 146px)',
   },
-  paper: {
+  paperContainer: {
     padding: 30,
+    height: '100%',
+  },
+  gridContainer: {
+    height: '100%',
   },
   item: {
-    height: 500,
+    height: '100%',
   },
   paperInside: {
-    height: '90%',
+    height: '100%',
+    overflow: 'auto',
   },
 }));
 
@@ -24,19 +30,18 @@ const Dashboard = () => {
 
   return (
     <Container disableGutters className={classes.root}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={3}>
+      <Paper className={classes.paperContainer}>
+        <Grid container spacing={3} className={classes.gridContainer}>
           <Grid className={classes.item} item xs={3}>
-            <Paper className={classes.paperInside} elevation={3}>
+            <Paper className={classes.paperInside} elevation={4}>
               <Todos />
-              <Divider />
             </Paper>
           </Grid>
           <Grid className={classes.item} item xs={6}>
-            <Paper className={classes.paperInside} elevation={3}></Paper>
+            <Paper className={classes.paperInside} elevation={4}></Paper>
           </Grid>
           <Grid className={classes.item} item xs={3}>
-            <Paper className={classes.paperInside} elevation={3}></Paper>
+            <Paper className={classes.paperInside} elevation={4}></Paper>
           </Grid>
         </Grid>
       </Paper>
