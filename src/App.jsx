@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import Header from './components/Header';
+import Header from './shared/Header';
 import Dashboard from './pages/Dashboard';
 
 const useClasses = makeStyles({

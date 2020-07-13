@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Grid, Paper, makeStyles, Divider } from '@material-ui/core';
 
+import Todos from '../../components/Todos';
+
 const useClasses = makeStyles((theme) => ({
   root: {
     position: 'relative',
@@ -25,9 +27,11 @@ const Dashboard = () => {
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
           <Grid className={classes.item} item xs={3}>
-            <Paper className={classes.paperInside} elevation={3}></Paper>
+            <Paper className={classes.paperInside} elevation={3}>
+              <Todos />
+              <Divider />
+            </Paper>
           </Grid>
-          <Divider />
           <Grid className={classes.item} item xs={6}>
             <Paper className={classes.paperInside} elevation={3}></Paper>
           </Grid>
