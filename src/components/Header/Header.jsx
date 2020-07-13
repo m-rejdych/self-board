@@ -30,9 +30,6 @@ const Header = () => {
     <div>
       <AppBar>
         <Toolbar>
-          {/* <IconButton>
-            <DashboardIcon fontSize="default" />
-          </IconButton> */}
           <Link
             className={classes.selfBoardLink}
             color="textPrimary"
