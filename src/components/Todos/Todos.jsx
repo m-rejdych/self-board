@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles, TextField, IconButton, Divider } from '@material-ui/core';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 import Todo from './Todo';
+import { addTodo } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -19,24 +21,34 @@ const useStyles = makeStyles((theme) => ({
 
 const Todos = () => {
   const classes = useStyles();
+  const todos = useSelector((state) => state.todos.todos);
+  const dispatch = useDispatch();
+
+  const [inputValue, setInputValue] = useState('');
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    inputValue && dispatch(addTodo(inputValue));
+    setInputValue('');
+  };
 
   return (
     <Fragment>
-      <form className={classes.form} noValidate autoComplete="off">
-        <TextField label="New Todo" type="text" />
-        <IconButton>
+      <div className={classes.form}>
+        <TextField
+          value={inputValue}
+          onChange={(event) => setInputValue(event.target.value)}
+          label="New Todo"
+          type="text"
+        />
+        <IconButton onClick={submitHandler} type="submit">
           <AddBoxIcon color="primary" className={classes.icon} />
         </IconButton>
-      </form>
+      </div>
       <Divider />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
+      {todos.map((todo, index) => (
+        <Todo key={index} label={todo} />
+      ))}
     </Fragment>
   );
 };

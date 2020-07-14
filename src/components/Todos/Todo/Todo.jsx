@@ -9,6 +9,7 @@ const useClasses = makeStyles((theme) => ({
     '&:not(:last-child)': {
       marginBottom: 5,
     },
+    borderBottom: `1px solid ${theme.palette.secondary.main}`,
   },
   title: {
     fontSize: theme.typography.body1.fontSize,
@@ -24,7 +25,7 @@ const useClasses = makeStyles((theme) => ({
   },
 }));
 
-const Todo = (props) => {
+const Todo = ({ label }) => {
   const classes = useClasses();
 
   return (
@@ -33,7 +34,7 @@ const Todo = (props) => {
         classes={{ action: classes.actionButtons }}
         className={classes.cardHeader}
         titleTypographyProps={{ className: classes.title }}
-        title="lorem ipsum dolor"
+        title={label}
         action={
           <Fragment>
             <IconButton>
