@@ -9,12 +9,17 @@ import { Card, CardHeader, IconButton, makeStyles } from '@material-ui/core';
 import { deleteTodo } from '../../../store/actions';
 
 const useClasses = makeStyles((theme) => ({
+  '@keyframes inputEnter': {
+    from: { transform: 'translateX(-100%)', opacity: 0 },
+    to: { transform: 'translateX(0)', opacity: 1 },
+  },
   root: {
     '&:not(:last-child)': {
       marginBottom: 5,
     },
     borderBottom: `1px solid ${theme.palette.secondary.main}`,
-    transition: 'all 0.3s ease',
+    transition: 'all 0.3s ease-out',
+    animation: '$inputEnter 0.3s ease-out',
   },
   animateBorder: {
     border: `1px solid ${theme.palette.success.main}`,
