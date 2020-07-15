@@ -1,5 +1,6 @@
 const TODOS = {
   ADD_TODO: 'TODOS_ADD_TODO',
+  DELETE_TODO: 'TODOS_DELETE_TODO',
 };
 
 export { TODOS };

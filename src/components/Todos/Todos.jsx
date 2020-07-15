@@ -26,10 +26,15 @@ const Todos = () => {
 
   const [inputValue, setInputValue] = useState('');
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-    inputValue && dispatch(addTodo(inputValue));
+  const submitHandler = () => {
+    inputValue && dispatch(addTodo({ todo: inputValue, id: Math.random() }));
     setInputValue('');
+  };
+
+  const enterPressHandler = (event) => {
+    if (event.key === 'Enter') {
+      submitHandler();
+    }
   };
 
   return (
@@ -40,15 +45,16 @@ const Todos = () => {
           onChange={(event) => setInputValue(event.target.value)}
           label="New Todo"
           type="text"
+          onKeyPress={(event) => enterPressHandler(event)}
         />
         <IconButton onClick={submitHandler} type="submit">
           <AddBoxIcon color="primary" className={classes.icon} />
         </IconButton>
       </div>
       <Divider />
-      {todos.map((todo, index) => (
-        <Todo key={index} label={todo} />
-      ))}
+      {todos
+        ? todos.map(({ todo, id }) => <Todo key={id} id={id} label={todo} />)
+        : 'Loading...'}
     </Fragment>
   );
 };

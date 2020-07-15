@@ -5,4 +5,9 @@ const addTodo = (todo) => ({
   payload: todo,
 });
 
-export { addTodo };
+const deleteTodo = (todos) => ({
+  type: TODOS.DELETE_TODO,
+  payload: todos,
+});
+
+export { addTodo, deleteTodo };
