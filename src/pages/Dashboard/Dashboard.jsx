@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Grid, Paper, makeStyles } from '@material-ui/core';
 
 import Todos from '../../components/Todos';
+import NewsFeed from '../../components/NewsFeed';
 
 const useClasses = makeStyles((theme) => ({
   root: {
@@ -38,7 +39,9 @@ const Dashboard = () => {
             </Paper>
           </Grid>
           <Grid className={classes.item} item xs={6}>
-            <Paper className={classes.paperInside} elevation={4}></Paper>
+            <Paper className={classes.paperInside} elevation={4}>
+              <NewsFeed />
+            </Paper>
           </Grid>
           <Grid className={classes.item} item xs={3}>
             <Paper className={classes.paperInside} elevation={4}></Paper>

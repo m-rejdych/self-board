@@ -52,9 +52,9 @@ const Todos = () => {
         </IconButton>
       </div>
       <Divider />
-      {todos
-        ? todos.map(({ todo, id }) => <Todo key={id} id={id} label={todo} />)
-        : 'Loading...'}
+      {todos.map(({ todo, id }) => (
+        <Todo key={id} id={id} label={todo} />
+      ))}
     </Fragment>
   );
 };
