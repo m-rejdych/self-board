@@ -8,7 +8,9 @@ function* handleLoadNews(action) {
     const url =
       'http://newsapi.org/v2/top-headlines?country=us&apiKey=c6b68bf26c8c45558d70c4eca273cdc2';
     const response = yield axios.get(url);
-    const newsFeed = response.data.articles.filter((item) => item.urlToImage);
+    const newsFeed = response.data.articles
+      .filter((item) => item.urlToImage && item.author)
+      .slice(0, 10);
     yield put(setLoadNews(newsFeed));
   } catch (error) {
     yield put(setLoadNewsError(error));

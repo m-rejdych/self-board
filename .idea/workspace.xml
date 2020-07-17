@@ -13,6 +13,9 @@
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/sagas/newsFeedSagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/newsFeedSagas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +32,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1edvjGkmFoyFyG96s0edtodVd3R" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +54,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v12.16.2/lib/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -129,10 +134,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="205" y="113" key="IDE.errors.dialog/0.23.1440.804@0.23.1440.804" timestamp="1595009241819" />
-    <state x="229" y="23" key="SettingsEditor" timestamp="1595011016458">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="229" y="23" key="SettingsEditor" timestamp="1595016950865">
+      <screen x="0" y="23" width="1440" height="798" />
     </state>
-    <state x="229" y="23" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1595001738985" />
+    <state x="229" y="23" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1595016950865" />
     <state x="229" y="23" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1595010713233" />
     <state x="229" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1595011016458" />
     <state width="623" height="500" key="SwitcherDM" timestamp="1595005874936">
@@ -140,14 +145,20 @@
     </state>
     <state width="623" height="498" key="SwitcherDM/0.23.1440.801@0.23.1440.801" timestamp="1595002479862" />
     <state width="623" height="500" key="SwitcherDM/0.23.1440.804@0.23.1440.804" timestamp="1595005874936" />
-    <state x="320" y="164" key="Vcs.Push.Dialog.v2" timestamp="1595009991723">
-      <screen x="0" y="23" width="1440" height="804" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1595018713240">
+      <screen x="0" y="23" width="1440" height="798" />
     </state>
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.798@0.23.1440.798" timestamp="1595018713240" />
     <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1594664563104" />
     <state x="320" y="164" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1595009991723" />
-    <state x="385" y="148" key="search.everywhere.popup" timestamp="1594664427183">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1595015581515">
+      <screen x="0" y="23" width="1440" height="798" />
     </state>
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1595015581515" />
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup" timestamp="1595015561759">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1595015561759" />
     <state x="385" y="148" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1594664427183" />
   </component>
 </project>
