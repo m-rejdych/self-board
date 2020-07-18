@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   EditingState,
   IntegratedEditing,
@@ -18,28 +19,25 @@ import {
   AllDayPanel,
 } from '@devexpress/dx-react-scheduler-material-ui';
 
+import { updateCalendar } from '../../store/actions';
+
 const Calendar = () => {
-  const [data, setData] = useState([
-    {
-      id: 1,
-      title: 'New appointment',
-      startDate: new Date().setHours(new Date().getHours()),
-      endDate: new Date().setHours(new Date().getHours() + 1),
-    },
-  ]);
-  const [currentDate] = useState(new Date().toString());
+  const appointments = useSelector((state) => state.calendar.appointments);
+  const currentDate = useSelector((state) => state.calendar.currentDate);
+  const dispatch = useDispatch();
 
   const commitChanges = ({ added, changed, deleted }) => {
-    let newData;
+    let newAppointments;
 
     if (added) {
-      const newAppointmentId = data[data.length - 1].id + 1;
-      newData = [...data, { id: newAppointmentId, ...added }];
+      const newAppointmentId = appointments.length
+        ? appointments[appointments.length - 1].id + 1
+        : 0;
+      newAppointments = [...appointments, { id: newAppointmentId, ...added }];
     }
 
     if (changed) {
-      console.log(changed);
-      newData = data.map((appointment) => {
+      newAppointments = appointments.map((appointment) => {
         const changedApointment = changed[appointment.id]
           ? { ...appointment, ...changed[appointment.id] }
           : appointment;
@@ -47,15 +45,17 @@ const Calendar = () => {
       });
     }
 
-    if (deleted) {
-      newData = data.filter((appointment) => appointment.id !== deleted);
+    if (deleted !== undefined) {
+      newAppointments = appointments.filter(
+        (appointment) => appointment.id !== deleted,
+      );
     }
 
-    setData(newData);
+    dispatch(updateCalendar(newAppointments));
   };
 
   return (
-    <Scheduler firstDayOfWeek={1} data={data}>
+    <Scheduler firstDayOfWeek={1} data={appointments}>
       <ViewState
         defaultCurrentViewName="Week"
         defaultCurrentDate={currentDate}

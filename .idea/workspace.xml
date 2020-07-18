@@ -12,11 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewsFeed/SingleNews/SingleNews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsFeed/SingleNews/SingleNews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +80,8 @@
       <workItem from="1595008375455" duration="522000" />
       <workItem from="1595008914644" duration="327000" />
       <workItem from="1595009279516" duration="1888000" />
-      <workItem from="1595071963257" duration="10185000" />
+      <workItem from="1595071963257" duration="14085000" />
+      <workItem from="1595112803562" duration="182000" />
     </task>
     <servers />
   </component>

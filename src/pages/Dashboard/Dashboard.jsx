@@ -34,14 +34,9 @@ const Dashboard = () => {
   const [newsFeedHovered, setNewsFeedHovered] = useState(true);
   const [calendarHovered, setCalendarHovered] = useState(false);
 
-  const handleMouseEnter = (func) => {
-    func(true);
-    setNewsFeedHovered(false);
-  };
-
-  const handleMouseLeave = (func) => {
-    func(false);
-    setNewsFeedHovered(true);
+  const handleHover = (func, prop) => {
+    func(prop);
+    setNewsFeedHovered(!prop);
   };
 
   return (
@@ -54,8 +49,8 @@ const Dashboard = () => {
       >
         <Grid
           className={classes.gridItem}
-          onMouseEnter={() => handleMouseEnter(setTodosHovered)}
-          onMouseLeave={() => handleMouseLeave(setTodosHovered)}
+          onMouseEnter={() => handleHover(setTodosHovered, true)}
+          onMouseLeave={() => handleHover(setTodosHovered, false)}
           item
           xs={todosHovered ? 8 : 2}
         >
@@ -70,8 +65,8 @@ const Dashboard = () => {
         </Grid>
         <Grid
           className={classes.gridItem}
-          onMouseEnter={() => handleMouseEnter(setCalendarHovered)}
-          onMouseLeave={() => handleMouseLeave(setCalendarHovered)}
+          onMouseEnter={() => handleHover(setCalendarHovered, true)}
+          onMouseLeave={() => handleHover(setCalendarHovered, false)}
           item
           xs={calendarHovered ? 8 : 2}
         >

@@ -6,7 +6,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import { red, green } from '@material-ui/core/colors';
 import { Card, CardHeader, IconButton, makeStyles } from '@material-ui/core';
 
-import { deleteTodo } from '../../../store/actions';
+import { updateTodos } from '../../../store/actions';
 
 const useClasses = makeStyles((theme) => ({
   '@keyframes inputEnter': {
@@ -55,7 +55,7 @@ const Todo = ({ label, id }) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setDeleted(true);
     setTimeout(() => {
-      dispatch(deleteTodo(updatedTodos));
+      dispatch(updateTodos(updatedTodos));
     }, 300);
   };
 

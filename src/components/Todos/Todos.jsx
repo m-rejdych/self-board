@@ -4,7 +4,7 @@ import { makeStyles, TextField, IconButton, Divider } from '@material-ui/core';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 import Todo from './Todo';
-import { addTodo } from '../../store/actions';
+import { updateTodos } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Todos = ({ todosHovered }) => {
+const Todos = () => {
   const classes = useStyles();
   const todos = useSelector((state) => state.todos.todos);
   const dispatch = useDispatch();
@@ -27,7 +27,10 @@ const Todos = ({ todosHovered }) => {
   const [inputValue, setInputValue] = useState('');
 
   const submitHandler = () => {
-    inputValue && dispatch(addTodo({ todo: inputValue, id: Math.random() }));
+    inputValue &&
+      dispatch(
+        updateTodos([...todos, { todo: inputValue, id: Math.random() }]),
+      );
     setInputValue('');
   };
 
