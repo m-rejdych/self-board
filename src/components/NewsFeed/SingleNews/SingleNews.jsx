@@ -6,7 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     height: '100%',
     display: 'flex',
@@ -23,10 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   media: {
-    height: 0,
     paddingTop: '56.25%', // 16:9
   },
-}));
+});
 
 const SingleNews = ({ author, date, imgUrl, description }) => {
   const classes = useStyles();

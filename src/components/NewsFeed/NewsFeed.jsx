@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadNews } from '../../store/actions';
-import { Grid, makeStyles, Link } from '@material-ui/core';
+import { Grid, makeStyles, Link, CircularProgress } from '@material-ui/core';
 
 import SingleNews from './SingleNews';
 
@@ -15,12 +15,16 @@ const useStyles = makeStyles((theme) => ({
       color: 'inherit',
     },
   },
+  loader: {
+    margin: '0 auto',
+  },
 }));
 
-const NewsFeed = () => {
+const NewsFeed = ({ newsFeedHovered }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const news = useSelector((state) => state.newsFeed.newsFeed);
+  const loading = useSelector((state) => state.newsFeed.loading);
 
   useEffect(() => {
     dispatch(loadNews());
@@ -28,18 +32,24 @@ const NewsFeed = () => {
 
   return (
     <Grid className={classes.root} container spacing={4}>
-      {news.map(({ author, url, urlToImage, publishedAt, description }) => (
-        <Grid item xs={6}>
-          <Link className={classes.singleNewsLink} target="_blank" href={url}>
-            <SingleNews
-              imgUrl={urlToImage}
-              date={publishedAt}
-              description={description}
-              author={author}
-            />
-          </Link>
+      {loading ? (
+        <Grid className={classes.loader} item>
+          <CircularProgress size={100} />
         </Grid>
-      ))}
+      ) : (
+        news.map(({ author, url, urlToImage, publishedAt, description }) => (
+          <Grid item xs={newsFeedHovered ? 6 : 12}>
+            <Link className={classes.singleNewsLink} target="_blank" href={url}>
+              <SingleNews
+                imgUrl={urlToImage}
+                date={publishedAt}
+                description={description}
+                author={author}
+              />
+            </Link>
+          </Grid>
+        ))
+      )}
     </Grid>
   );
 };

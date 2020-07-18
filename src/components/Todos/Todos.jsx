@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Todos = () => {
+const Todos = ({ todosHovered }) => {
   const classes = useStyles();
   const todos = useSelector((state) => state.todos.todos);
   const dispatch = useDispatch();
@@ -41,6 +41,7 @@ const Todos = () => {
     <Fragment>
       <div className={classes.form}>
         <TextField
+          fullWidth
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
           label="New Todo"
