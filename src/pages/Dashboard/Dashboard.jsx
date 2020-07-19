@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Grid, Paper, makeStyles } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  Paper,
+  makeStyles,
+  useTheme,
+} from '@material-ui/core';
 
 import Todos from '../../components/Todos';
 import NewsFeed from '../../components/NewsFeed';
@@ -8,8 +14,10 @@ import Calendar from '../../components/Calendar';
 const useClasses = makeStyles((theme) => ({
   root: {
     position: 'relative',
-    top: 80,
-    height: 'calc(100% - 146px)',
+    top: theme.spacing(10),
+    padding: `0 ${theme.spacing(3)}px`,
+    height: 'calc(100% - 120px)',
+    maxWidth: '100%',
   },
   gridContainer: {
     height: '100%',
@@ -29,6 +37,7 @@ const useClasses = makeStyles((theme) => ({
 
 const Dashboard = () => {
   const classes = useClasses();
+  const theme = useTheme();
 
   const [todosHovered, setTodosHovered] = useState(false);
   const [newsFeedHovered, setNewsFeedHovered] = useState(true);
@@ -40,7 +49,7 @@ const Dashboard = () => {
   };
 
   return (
-    <Container disableGutters className={classes.root}>
+    <Container classes={{ root: classes.root }} disableGutters>
       <Grid
         container
         justify="center"
@@ -52,13 +61,21 @@ const Dashboard = () => {
           onMouseEnter={() => handleHover(setTodosHovered, true)}
           onMouseLeave={() => handleHover(setTodosHovered, false)}
           item
-          xs={todosHovered ? 8 : 2}
+          lg={todosHovered ? 8 : 2}
+          md={10}
+          xs={12}
         >
           <Paper className={classes.paper} elevation={4}>
             <Todos />
           </Paper>
         </Grid>
-        <Grid className={classes.gridItem} item xs={newsFeedHovered ? 8 : 2}>
+        <Grid
+          className={classes.gridItem}
+          item
+          lg={newsFeedHovered ? 8 : 2}
+          md={10}
+          xs={12}
+        >
           <Paper className={classes.paper} elevation={4}>
             <NewsFeed newsFeedHovered={newsFeedHovered} />
           </Paper>
@@ -68,7 +85,9 @@ const Dashboard = () => {
           onMouseEnter={() => handleHover(setCalendarHovered, true)}
           onMouseLeave={() => handleHover(setCalendarHovered, false)}
           item
-          xs={calendarHovered ? 8 : 2}
+          lg={calendarHovered ? 8 : 2}
+          md={10}
+          xs={12}
         >
           <Paper className={classes.paper} elevation={4}>
             <Calendar />

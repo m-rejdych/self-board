@@ -3,7 +3,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useClasses = makeStyles((theme) => ({
   root: {
-    bottom: 0,
+    marginTop: 'auto',
     minHeight: 48,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',

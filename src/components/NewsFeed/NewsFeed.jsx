@@ -38,7 +38,7 @@ const NewsFeed = ({ newsFeedHovered }) => {
         </Grid>
       ) : (
         news.map(({ author, url, urlToImage, publishedAt, description }) => (
-          <Grid key={url} item xs={newsFeedHovered ? 6 : 12}>
+          <Grid key={url} item lg={newsFeedHovered ? 6 : 12} sm={6} xs={12}>
             <Link className={classes.singleNewsLink} target="_blank" href={url}>
               <SingleNews
                 imgUrl={urlToImage}
