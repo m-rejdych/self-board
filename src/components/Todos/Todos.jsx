@@ -7,12 +7,13 @@ import Todo from './Todo';
 import { updateTodos } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
-  form: {
+  root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(2),
     },
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   icon: {
     fontSize: 40,
@@ -26,7 +27,7 @@ const Todos = () => {
 
   const [inputValue, setInputValue] = useState('');
 
-  const submitHandler = () => {
+  const handleClick = () => {
     inputValue &&
       dispatch(
         updateTodos([...todos, { todo: inputValue, id: Math.random() }]),
@@ -34,26 +35,28 @@ const Todos = () => {
     setInputValue('');
   };
 
-  const enterPressHandler = (event) => {
+  const handleEnterPress = (event) => {
     if (event.key === 'Enter') {
-      submitHandler();
+      handleClick();
     }
   };
 
   return (
     <Fragment>
-      <div className={classes.form}>
+      <div className={classes.root}>
         <TextField
           fullWidth
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
           label="New Todo"
           type="text"
-          onKeyPress={(event) => enterPressHandler(event)}
+          onKeyPress={(event) => handleEnterPress(event)}
         />
-        <IconButton onClick={submitHandler} type="submit">
-          <AddBoxIcon color="primary" className={classes.icon} />
-        </IconButton>
+        <AddBoxIcon
+          onClick={handleClick}
+          color="primary"
+          className={classes.icon}
+        />
       </div>
       <Divider />
       {todos.map(({ todo, id }) => (

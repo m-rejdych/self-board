@@ -1,0 +1,63 @@
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
+import Todos from '../Todos';
+import NewsFeed from '../NewsFeed';
+import Calendar from '../Calendar';
+
+const TabPanel = ({ children, value, index }) => {
+  return (
+    <div hidden={value !== index}>
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+};
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+}));
+
+const DashboardTabs = () => {
+  const classes = useStyles();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const tabs = [
+    { id: 1, label: 'Todos', component: <Todos /> },
+    { id: 2, label: 'NewsFeed', component: <NewsFeed /> },
+    { id: 3, label: 'Calendar', component: <Calendar /> },
+  ];
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Tabs variant="fullWidth" value={value} onChange={handleChange}>
+          {tabs.map(({ label, id }) => (
+            <Tab label={label} id={id} />
+          ))}
+        </Tabs>
+      </AppBar>
+      {tabs.map(({ component, id }) => (
+        <TabPanel value={value} index={id - 1}>
+          {component}
+        </TabPanel>
+      ))}
+    </div>
+  );
+};
+
+export default DashboardTabs;

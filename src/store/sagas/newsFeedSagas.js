@@ -10,7 +10,7 @@ function* handleLoadNews(action) {
     const response = yield axios.get(url);
     const newsFeed = response.data.articles
       .filter((item) => item.urlToImage && item.author)
-      .slice(0, 10);
+      .slice(0, 12);
     yield put(setLoadNews(newsFeed));
   } catch (error) {
     yield put(setLoadNewsError(error));

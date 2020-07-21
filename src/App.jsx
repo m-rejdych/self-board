@@ -8,8 +8,6 @@ import Dashboard from './pages/Dashboard';
 const useClasses = makeStyles({
   root: {
     height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
   },
 });
 
