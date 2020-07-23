@@ -13,11 +13,6 @@
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/newsFeedSagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/newsFeedSagas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +83,7 @@
       <workItem from="1595071963257" duration="14085000" />
       <workItem from="1595112803562" duration="276000" />
       <workItem from="1595177611677" duration="8306000" />
+      <workItem from="1595535708993" duration="636000" />
     </task>
     <servers />
   </component>
