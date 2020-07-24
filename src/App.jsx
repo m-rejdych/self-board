@@ -5,25 +5,27 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './shared/Header';
 import Footer from './shared/Footer';
 import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
 
 const useClasses = makeStyles({
   root: {
-    height: '100vh',
+    minHeight: '100vh',
   },
 });
 
-function App() {
+const App = () => {
   const classes = useClasses();
 
   return (
     <div className={classes.root}>
-      <Header />
+      {/*<Header />*/}
       <Switch>
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Home} />
       </Switch>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

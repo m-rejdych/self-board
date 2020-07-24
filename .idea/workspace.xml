@@ -12,7 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +63,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Previews" />
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -83,7 +92,8 @@
       <workItem from="1595071963257" duration="14085000" />
       <workItem from="1595112803562" duration="276000" />
       <workItem from="1595177611677" duration="8306000" />
-      <workItem from="1595535708993" duration="636000" />
+      <workItem from="1595535708993" duration="789000" />
+      <workItem from="1595608418104" duration="16744000" />
     </task>
     <servers />
   </component>
@@ -113,10 +123,18 @@
     </state>
     <state x="184" y="23" width="1081" height="798" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.798@0.23.1440.798" timestamp="1595001040937" />
     <state x="184" y="23" width="1081" height="801" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1594997817159" />
+    <state x="472" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595613701964">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="472" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.801@0.23.1440.801" timestamp="1595613701964" />
     <state x="564" y="23" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595006591633">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="564" y="23" key="#com.intellij.ide.macro.MacrosDialog/0.23.1440.801@0.23.1440.801" timestamp="1595006591633" />
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595622550219">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.798@0.23.1440.798" timestamp="1595622550219" />
     <state x="589" y="223" width="495" height="577" key="#com.intellij.tools.ToolEditorDialog" timestamp="1595007293920">
       <screen x="0" y="23" width="1440" height="801" />
     </state>

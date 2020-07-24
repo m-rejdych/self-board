@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     type: 'dark',
   },
   typography: {
-    fontFamily: 'Poppins, Roboto, Helvetica, sans-serif',
+    fontFamily: 'Roboto Slab, Roboto, Helvetica, sans-serif',
   },
 });
 

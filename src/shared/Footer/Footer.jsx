@@ -4,8 +4,8 @@ import { makeStyles, Typography } from '@material-ui/core';
 const useClasses = makeStyles((theme) => ({
   root: {
     position: 'absolute',
-    bottom: 0,
     left: 0,
+    marginTop: 'auto',
     width: '100%',
     minHeight: 48,
     backgroundColor: theme.palette.background.paper,

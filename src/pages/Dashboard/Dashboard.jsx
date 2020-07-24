@@ -5,12 +5,8 @@ import DashboardTabs from '../../components/Tabs';
 
 const useClasses = makeStyles((theme) => ({
   root: {
-    position: 'relative',
-    paddingTop: theme.spacing(10),
-    paddingRight: theme.spacing(3),
-    paddingBottom: theme.spacing(8),
-    paddingLeft: theme.spacing(3),
-    height: '100%',
+    padding: theme.spacing(3),
+    height: `calc(100vh - ${theme.spacing(6)}px)`,
     maxWidth: '100%',
   },
   paper: {
