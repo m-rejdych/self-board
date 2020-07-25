@@ -1,20 +1,17 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
+import React, { Fragment } from 'react';
 
 import LandingPage from '../../components/LandingPage';
 import TodosPreview from '../../components/Previews/TodosPreview';
+import NewsFeedPreview from '../../components/Previews/NewsFeedPreview';
+import CalendarPreview from '../../components/Previews/CalendarPreview';
 
-const Home = () => {
-  return (
-    <Grid container>
-      <Grid item xs={12}>
-        <LandingPage />
-      </Grid>
-      <Grid item xs={12}>
-        <TodosPreview />
-      </Grid>
-    </Grid>
-  );
-};
+const Home = () => (
+  <Fragment>
+    <LandingPage />
+    <TodosPreview />
+    <NewsFeedPreview />
+    <CalendarPreview />
+  </Fragment>
+);
 
 export default Home;

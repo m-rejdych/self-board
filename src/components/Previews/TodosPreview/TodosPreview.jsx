@@ -1,26 +1,16 @@
 import React from 'react';
-import { makeStyles, Typography } from '@material-ui/core';
 
-import PreviewDivider from '../PreviewDivider';
+import { ReactComponent as TodoSvg } from '../../../assets/TodoSvg.svg';
+import PreviewGenerator from '../../../utils/PreviewGenerator';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    height: '100vh',
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-}));
-
-const TodosPreview = () => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <PreviewDivider title="Todos" />
-    </div>
-  );
-};
+const TodosPreview = () => (
+  <PreviewGenerator
+    title="Todos"
+    SvgIcon={TodoSvg}
+    headerText="DO"
+    subHeaderText="what you need to do."
+    id="info"
+  />
+);
 
 export default TodosPreview;
