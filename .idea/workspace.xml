@@ -14,13 +14,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/LandingBackground.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Previews/PreviewDivider/PreviewDivider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/PreviewDivider/PreviewDivider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Previews/PreviewDivider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/PreviewDivider/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/CalendarPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/CalendarPreview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/NewsFeedPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/NewsFeedPreview.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Previews/TodosPreview/TodosPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/TodosPreview/TodosPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,8 @@
       <workItem from="1595632575253" duration="14000" />
       <workItem from="1595632624691" duration="26000" />
       <workItem from="1595673777311" duration="55000" />
-      <workItem from="1595673855580" duration="20508000" />
+      <workItem from="1595673855580" duration="20610000" />
+      <workItem from="1595762842920" duration="13681000" />
     </task>
     <servers />
   </component>
@@ -183,9 +183,10 @@
     <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.798@0.23.1440.798" timestamp="1595074465527" />
     <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1594664563104" />
     <state x="320" y="164" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1595009991723" />
-    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1595072662758">
-      <screen x="0" y="23" width="1440" height="798" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1595778707032">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.797@0.23.1440.797" timestamp="1595778707032" />
     <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1595072662758" />
     <state x="385" y="148" width="670" height="676" key="search.everywhere.popup" timestamp="1595717549070">
       <screen x="0" y="23" width="1440" height="797" />

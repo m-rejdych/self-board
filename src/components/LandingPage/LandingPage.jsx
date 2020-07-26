@@ -39,8 +39,11 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(40),
     top: theme.spacing(5),
   },
-  background: {
-    width: '55%',
+  modalButton: {
+    margin: `${theme.spacing(2)}px auto`,
+  },
+  landingSvg: {
+    width: 650,
     '& #circle-big': {
       animation: '$enterCross 2s ease-out',
     },
@@ -94,14 +97,35 @@ const LandingPage = () => {
 
   return (
     <Fragment>
-      <Modal open={openModal} handleClose={handleCloseModal} />
+      <Modal open={openModal} handleClose={handleCloseModal}>
+        <Typography>Log in to get your own, unique dashboard!</Typography>
+        <Button
+          fullWidth
+          href="/auth"
+          className={classes.modalButton}
+          variant="contained"
+          color="primary"
+        >
+          LOG IN
+        </Button>
+        <Typography>Screw that, let's jump right into this!</Typography>
+        <Button
+          fullWidth
+          href="\dashboard"
+          className={classes.modalButton}
+          variant="contained"
+          color="secondary"
+        >
+          GO TO DASHBOARD
+        </Button>
+      </Modal>
       <ParallaxBanner
         style={{ height: '100vh' }}
         layers={[
           {
             children: (
               <div className={classes.root}>
-                <LandingPageSvg className={classes.background} />
+                <LandingPageSvg className={classes.landingSvg} />
                 <div className={classes.textContainer}>
                   <div className={classes.square} />
                   <Typography className={classes.typography} variant="h1">

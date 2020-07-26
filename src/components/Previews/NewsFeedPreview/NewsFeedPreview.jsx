@@ -5,7 +5,7 @@ import PreviewGenerator from '../../../utils/PreviewGenerator';
 
 const NewsFeedPreview = () => (
   <PreviewGenerator
-    title="NewsFeed"
+    title="NEWS FEED"
     SvgIcon={NewsFeedSvg}
     headerText="KNOW"
     subHeaderText="what you need to know."

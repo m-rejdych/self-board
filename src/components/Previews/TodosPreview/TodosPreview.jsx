@@ -5,7 +5,7 @@ import PreviewGenerator from '../../../utils/PreviewGenerator';
 
 const TodosPreview = () => (
   <PreviewGenerator
-    title="Todos"
+    title="TODO LIST"
     SvgIcon={TodoSvg}
     headerText="DO"
     subHeaderText="what you need to do."

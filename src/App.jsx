@@ -6,6 +6,7 @@ import Header from './shared/Header';
 import Footer from './shared/Footer';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
+import Auth from './pages/Auth';
 
 const useClasses = makeStyles({
   root: {
@@ -21,7 +22,8 @@ const App = () => {
       {/*<Header />*/}
       <Switch>
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/" component={Home} />
+        <Route path="/auth" component={Auth} />
+        <Route exact path="/" component={Home} />
       </Switch>
       <Footer />
     </div>

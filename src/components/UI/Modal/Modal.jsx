@@ -2,10 +2,11 @@ import React from 'react';
 import { makeStyles, Modal, Backdrop, Fade } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-  modal: {
+  root: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    minWidth: 300,
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -15,31 +16,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TransitionModal = ({ handleClose, open }) => {
+const TransitionModal = ({ handleClose, open, children }) => {
   const classes = useStyles();
 
   return (
-    <div>
-      <Modal
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">
-              react-transition-group animates me.
-            </p>
-          </div>
-        </Fade>
-      </Modal>
-    </div>
+    <Modal
+      className={classes.root}
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{
+        timeout: 500,
+      }}
+    >
+      <Fade in={open}>
+        <div className={classes.paper}>{children}</div>
+      </Fade>
+    </Modal>
   );
 };
 

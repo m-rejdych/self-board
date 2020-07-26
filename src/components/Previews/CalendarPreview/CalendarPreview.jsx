@@ -5,7 +5,7 @@ import PreviewGenerator from '../../../utils/PreviewGenerator';
 
 const CalendarPreview = () => (
   <PreviewGenerator
-    title="Calendar"
+    title="CALENDAR"
     SvgIcon={CalendarSvg}
     headerText="BE"
     subHeaderText="where you need to be."
