@@ -12,14 +12,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/CalendarPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/CalendarPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/NewsFeedPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/NewsFeedPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Previews/TodosPreview/TodosPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Previews/TodosPreview/TodosPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthFormInputs/AuthFormInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthFormInputs/AuthFormInputs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/newsFeedActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/newsFeedActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/constans/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/newsFeedReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/newsFeedReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,8 @@
       <workItem from="1595632624691" duration="26000" />
       <workItem from="1595673777311" duration="55000" />
       <workItem from="1595673855580" duration="20610000" />
-      <workItem from="1595762842920" duration="13681000" />
+      <workItem from="1595762842920" duration="13920000" />
+      <workItem from="1595875151803" duration="10523000" />
     </task>
     <servers />
   </component>
@@ -131,9 +134,10 @@
     </state>
     <state x="184" y="23" width="1081" height="798" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.798@0.23.1440.798" timestamp="1595001040937" />
     <state x="184" y="23" width="1081" height="801" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1594997817159" />
-    <state x="472" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595613701964">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state x="472" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595884024051">
+      <screen x="0" y="23" width="1440" height="797" />
     </state>
+    <state x="472" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.797@0.23.1440.797" timestamp="1595884024051" />
     <state x="472" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.801@0.23.1440.801" timestamp="1595613701964" />
     <state x="564" y="23" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595006591633">
       <screen x="0" y="23" width="1440" height="801" />

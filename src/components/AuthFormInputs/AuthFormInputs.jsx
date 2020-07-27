@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Field } from 'formik';
 import { TextField, makeStyles } from '@material-ui/core';
 
@@ -8,8 +9,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AuthFormInputs = ({ values, loginMode }) => {
+const AuthFormInputs = ({ values }) => {
   const classes = useStyles();
+  const loginMode = useSelector((state) => state.user.loginMode);
 
   const inputs = [
     !loginMode && {
@@ -60,26 +62,31 @@ const AuthFormInputs = ({ values, loginMode }) => {
       validate: (value) => {
         let errorMessage;
         errorMessage =
-          value === values.password ? '' : 'Passwords must be the same!';
+          value === values.password && value !== ''
+            ? ''
+            : 'Passwords must be the same!';
         return errorMessage;
       },
     },
   ];
 
-  return inputs.map(({ name, validate, ...rest }) => (
-    <Field validate={validate} name={name}>
-      {({ field, meta }) => (
-        <TextField
-          {...rest}
-          {...field}
-          error={meta.error && meta.touched}
-          helperText={meta.error && meta.touched && meta.error}
-          className={classes.textField}
-          variant="outlined"
-        />
-      )}
-    </Field>
-  ));
+  return inputs.map(
+    ({ name, validate, ...rest }) =>
+      name && (
+        <Field key={name} validate={validate} name={name}>
+          {({ field, meta }) => (
+            <TextField
+              {...rest}
+              {...field}
+              error={meta.error && meta.touched}
+              helperText={meta.error && meta.touched && meta.error}
+              className={classes.textField}
+              variant="outlined"
+            />
+          )}
+        </Field>
+      ),
+  );
 };
 
 export default AuthFormInputs;

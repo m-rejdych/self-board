@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   Container,
   makeStyles,
@@ -10,11 +11,13 @@ import {
   CardContent,
   CardActions,
   IconButton,
+  CircularProgress,
 } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Formik } from 'formik';
 
 import AuthFormInputs from '../../components/AuthFormInputs';
+import { setLoginMode, auth } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     width: '100%',
-    padding: `${theme.spacing(8)}px ${theme.spacing(5)}px`,
+    padding: `${theme.spacing(3)}px ${theme.spacing(5)}px`,
   },
   cardContent: {
     display: 'flex',
@@ -46,7 +49,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Auth = () => {
   const classes = useStyles();
-  const [loginMode, setLoginMode] = useState(false);
+  const loginMode = useSelector((state) => state.user.loginMode);
+  const loading = useSelector((state) => state.auth.loading);
+  const dispatch = useDispatch();
 
   const initialValues = loginMode
     ? { email: '', password: '' }
@@ -57,48 +62,67 @@ const Auth = () => {
         passwordConfirmation: '',
       };
 
+  const handleSubmit = ({ name, email, password }) => {
+    dispatch(
+      auth({
+        userData: { email, password, returnSecureToken: true },
+        name,
+        loginMode,
+      }),
+    );
+  };
+
   return (
     <Container maxWidth="sm" className={classes.root}>
-      <Formik initialValues={initialValues} onSubmit={() => {}}>
-        {({ values, isValid, dirty }) => (
-          <Card elevation={3} className={classes.card}>
-            <CardHeader
-              title={loginMode ? 'LOG IN' : 'SIGN UP'}
-              action={
-                <IconButton href="/">
-                  <ArrowBackIosIcon />
-                </IconButton>
-              }
-            />
-            <CardContent className={classes.cardContent}>
-              <AuthFormInputs values={values} loginMode={loginMode} />
-            </CardContent>
-            <CardActions className={classes.cardActions}>
-              <Button
-                fullWidth
-                disabled={!isValid || !dirty}
-                color="primary"
-                variant="contained"
-              >
-                {loginMode ? 'LOG IN' : 'SIGN UP'}
-              </Button>
-              <Box display="flex" mt={1}>
-                <Typography variant="caption">
-                  {loginMode
-                    ? "Don't have an account? "
-                    : 'Already have an account? '}
-                  <span
-                    onClick={() => setLoginMode(!loginMode)}
-                    className={classes.switchSpan}
-                  >
-                    {loginMode ? 'SIGN UP' : 'LOG IN'}
-                  </span>
-                </Typography>
-              </Box>
-            </CardActions>
-          </Card>
-        )}
-      </Formik>
+      {loading ? (
+        <CircularProgress />
+      ) : (
+        <Formik initialValues={initialValues}>
+          {({ values, isValid, dirty, handleReset }) => (
+            <Card elevation={3} className={classes.card}>
+              <CardHeader
+                title={loginMode ? 'LOG IN' : 'SIGN UP'}
+                action={
+                  <IconButton href="/">
+                    <ArrowBackIosIcon />
+                  </IconButton>
+                }
+              />
+              <CardContent className={classes.cardContent}>
+                <AuthFormInputs values={values} />
+              </CardContent>
+              <CardActions className={classes.cardActions}>
+                <Button
+                  type="submit"
+                  fullWidth
+                  disabled={!isValid || !dirty}
+                  color="primary"
+                  variant="contained"
+                  onClick={() => handleSubmit(values)}
+                >
+                  {loginMode ? 'LOG IN' : 'SIGN UP'}
+                </Button>
+                <Box display="flex" mt={1}>
+                  <Typography variant="caption">
+                    {loginMode
+                      ? "Don't have an account? "
+                      : 'Already have an account? '}
+                    <span
+                      onClick={() => {
+                        dispatch(setLoginMode(!loginMode));
+                        handleReset();
+                      }}
+                      className={classes.switchSpan}
+                    >
+                      {loginMode ? 'SIGN UP' : 'LOG IN'}
+                    </span>
+                  </Typography>
+                </Box>
+              </CardActions>
+            </Card>
+          )}
+        </Formik>
+      )}
     </Container>
   );
 };

@@ -10,7 +10,7 @@ const setLoadNews = (newsFeed) => ({
 });
 
 const setLoadNewsError = (error) => ({
-  type: NEWS_FEED.LOADN_NEWS_FAIL,
+  type: NEWS_FEED.LOAD_NEWS_FAIL,
   payload: error,
 });
 

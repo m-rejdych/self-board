@@ -4,10 +4,10 @@ const initialState = {
   todos: [],
 };
 
-const todosReducer = (state = initialState, action) => {
-  switch (action.type) {
+const todosReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case TODOS.UPDATE_TODOS:
-      return { todos: action.payload };
+      return { todos: payload };
     default:
       return state;
   }

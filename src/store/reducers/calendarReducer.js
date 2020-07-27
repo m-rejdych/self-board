@@ -5,10 +5,10 @@ const initialState = {
   appointments: [],
 };
 
-const calendarReducer = (state = initialState, action) => {
-  switch (action.type) {
+const calendarReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case CALENDAR.UPDATE_CALENDAR:
-      return { ...state, appointments: action.payload };
+      return { ...state, appointments: payload };
     default:
       return state;
   }
