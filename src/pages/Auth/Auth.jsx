@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
   Container,
   makeStyles,
@@ -16,7 +17,7 @@ import {
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Formik } from 'formik';
 
-import AuthFormInputs from '../../components/AuthFormInputs';
+import AuthFormInputs from './AuthFormInputs';
 import { setLoginMode, auth } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +63,7 @@ const Auth = () => {
         passwordConfirmation: '',
       };
 
-  const handleSubmit = ({ name, email, password }) => {
+  const handleSubmit = async ({ name, email, password }) => {
     dispatch(
       auth({
         userData: { email, password, returnSecureToken: true },
@@ -93,8 +94,10 @@ const Auth = () => {
               </CardContent>
               <CardActions className={classes.cardActions}>
                 <Button
-                  type="submit"
                   fullWidth
+                  component={Link}
+                  rel="noopener"
+                  to="/dashboard"
                   disabled={!isValid || !dirty}
                   color="primary"
                   variant="contained"

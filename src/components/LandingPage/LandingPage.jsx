@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { Typography, Button, makeStyles } from '@material-ui/core';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 import { ReactComponent as LandingPageSvg } from '../../assets/LandingPageSvg.svg';
 import Modal from '../UI/Modal';
@@ -101,7 +102,8 @@ const LandingPage = () => {
         <Typography>Log in to get your own, unique dashboard!</Typography>
         <Button
           fullWidth
-          href="/auth"
+          component={RouterLink}
+          to="/auth"
           className={classes.modalButton}
           variant="contained"
           color="primary"
@@ -111,7 +113,9 @@ const LandingPage = () => {
         <Typography>Screw that, let's jump right into this!</Typography>
         <Button
           fullWidth
-          href="\dashboard"
+          rel="noopener"
+          component={RouterLink}
+          to="/dashboard"
           className={classes.modalButton}
           variant="contained"
           color="secondary"
@@ -135,11 +139,11 @@ const LandingPage = () => {
                     Your daily guide
                   </Typography>
                   <div className={classes.buttonsContainer}>
-                    <Link smooth duration={500} to="info">
+                    <ScrollLink smooth duration={500} to="info">
                       <Button size="large" color="secondary">
                         SHOW MORE
                       </Button>
-                    </Link>
+                    </ScrollLink>
                     <Button
                       size="large"
                       variant="outlined"

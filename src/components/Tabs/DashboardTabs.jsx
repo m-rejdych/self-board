@@ -47,12 +47,12 @@ const DashboardTabs = () => {
       <AppBar position="static">
         <Tabs variant="fullWidth" value={value} onChange={handleChange}>
           {tabs.map(({ label, id }) => (
-            <Tab label={label} id={id} />
+            <Tab key={`tab_${id}`} label={label} id={id} />
           ))}
         </Tabs>
       </AppBar>
       {tabs.map(({ component, id }) => (
-        <TabPanel value={value} index={id - 1}>
+        <TabPanel key={`tab-panel_${id}`} value={value} index={id - 1}>
           {component}
         </TabPanel>
       ))}

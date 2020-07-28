@@ -12,16 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthFormInputs/AuthFormInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AuthFormInputs/AuthFormInputs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthFormInputs/AuthFormInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/AuthFormInputs/AuthFormInputs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AuthFormInputs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/AuthFormInputs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tabs/DashboardTabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/DashboardTabs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/newsFeedActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/newsFeedActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/constans/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/newsFeedReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/newsFeedReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Auth" />
       <recent name="$PROJECT_DIR$/src/components/UI" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/components/Previews" />
       <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -104,7 +99,8 @@
       <workItem from="1595673777311" duration="55000" />
       <workItem from="1595673855580" duration="20610000" />
       <workItem from="1595762842920" duration="13920000" />
-      <workItem from="1595875151803" duration="10523000" />
+      <workItem from="1595875151803" duration="10583000" />
+      <workItem from="1595967924969" duration="2634000" />
     </task>
     <servers />
   </component>
