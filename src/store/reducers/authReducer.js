@@ -18,6 +18,8 @@ const authReducer = (state = initialState, { type, payload }) => {
       return { ...state, loading: false, ...payload };
     case AUTH.AUTH_FAIL:
       return { ...state, loading: false, error: payload };
+    case AUTH.RESET_ERROR:
+      return { ...state, error: null };
     default:
       return state;
   }

@@ -19,6 +19,7 @@ function* handleAuth({ payload }) {
         userId: localId,
       }),
     );
+    payload.history.push('/dashboard');
   } catch (error) {
     yield put(authFail(error.message));
   }

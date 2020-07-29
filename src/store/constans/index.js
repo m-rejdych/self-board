@@ -16,6 +16,7 @@ const AUTH = {
   AUTH: 'AUTH',
   AUTH_SUCCESS: 'AUTH_SUCCESS',
   AUTH_FAIL: 'AUTH_FAIL',
+  RESET_ERROR: 'AUTH_RESET_ERROR',
 };
 
 const USER = {

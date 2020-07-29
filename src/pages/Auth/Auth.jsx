@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import {
   Container,
   makeStyles,
@@ -18,7 +17,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import { Formik } from 'formik';
 
 import AuthFormInputs from './AuthFormInputs';
-import { setLoginMode, auth } from '../../store/actions';
+import { setLoginMode, auth, authResetError } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,10 +47,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Auth = () => {
+const Auth = ({ history }) => {
   const classes = useStyles();
   const loginMode = useSelector((state) => state.user.loginMode);
   const loading = useSelector((state) => state.auth.loading);
+  const errorMessage = useSelector((state) => state.auth.error);
   const dispatch = useDispatch();
 
   const initialValues = loginMode
@@ -63,12 +63,19 @@ const Auth = () => {
         passwordConfirmation: '',
       };
 
-  const handleSubmit = async ({ name, email, password }) => {
+  const handleResetMode = (handleReset) => {
+    dispatch(setLoginMode(!loginMode));
+    dispatch(authResetError());
+    handleReset();
+  };
+
+  const handleSubmit = ({ name, email, password }) => {
     dispatch(
       auth({
         userData: { email, password, returnSecureToken: true },
         name,
         loginMode,
+        history,
       }),
     );
   };
@@ -90,14 +97,18 @@ const Auth = () => {
                 }
               />
               <CardContent className={classes.cardContent}>
+                {errorMessage && (
+                  <Typography color="error" paragraph>
+                    {loginMode
+                      ? 'Email or password is not valid!'
+                      : 'This email address is already used!'}
+                  </Typography>
+                )}
                 <AuthFormInputs values={values} />
               </CardContent>
               <CardActions className={classes.cardActions}>
                 <Button
                   fullWidth
-                  component={Link}
-                  rel="noopener"
-                  to="/dashboard"
                   disabled={!isValid || !dirty}
                   color="primary"
                   variant="contained"
@@ -111,10 +122,7 @@ const Auth = () => {
                       ? "Don't have an account? "
                       : 'Already have an account? '}
                     <span
-                      onClick={() => {
-                        dispatch(setLoginMode(!loginMode));
-                        handleReset();
-                      }}
+                      onClick={() => handleResetMode(handleReset)}
                       className={classes.switchSpan}
                     >
                       {loginMode ? 'SIGN UP' : 'LOG IN'}
