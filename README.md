@@ -1,1 +1,1 @@
-## Project is currently in development process
+## This project is currently in development process
