@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/CalendarSvg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/LandingPageSvg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/NewsFeedSvg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/TodoSvg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/axiosFirebase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Calendar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DashboardTabs/DashboardTabs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DashboardTabs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LandingPage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsFeed/NewsFeed.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsFeed/SingleNews/SingleNews.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsFeed/SingleNews/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsFeed/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/CalendarPreview.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/CalendarPreview/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/NewsFeedPreview.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/NewsFeedPreview/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/TodosPreview/TodosPreview.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Previews/TodosPreview/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Todos/Todo/Todo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Todos/Todo/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Todos/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Modal/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/PreviewDivider/PreviewDivider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/PreviewDivider/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/AuthFormInputs/AuthFormInputs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/AuthFormInputs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/Footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/Footer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/Header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/Header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/authActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/calendarActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/newsFeedActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/todosActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/userActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/constans/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/authReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/newsFeedReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/sagas/authSagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/sagas/newsFeedSagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/sagas/todosSagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/PreviewGenerator/PreviewGenerator.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/PreviewGenerator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/theme.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1edvjGkmFoyFyG96s0edtodVd3R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v12.16.2/lib/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Auth" />
+      <recent name="$PROJECT_DIR$/src/components/UI" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/components/Previews" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="" />
+      <created>1594664417385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594664417385</updated>
+      <workItem from="1594664421272" duration="170000" />
+      <workItem from="1594664659266" duration="157000" />
+      <workItem from="1594740297839" duration="1170000" />
+      <workItem from="1594741490619" duration="290000" />
+      <workItem from="1594996951596" duration="1059000" />
+      <workItem from="1594998028177" duration="1796000" />
+      <workItem from="1594999999458" duration="322000" />
+      <workItem from="1595000845424" duration="6690000" />
+      <workItem from="1595008375455" duration="522000" />
+      <workItem from="1595008914644" duration="327000" />
+      <workItem from="1595009279516" duration="1888000" />
+      <workItem from="1595071963257" duration="14085000" />
+      <workItem from="1595112803562" duration="276000" />
+      <workItem from="1595177611677" duration="8306000" />
+      <workItem from="1595535708993" duration="789000" />
+      <workItem from="1595608418104" duration="16997000" />
+      <workItem from="1595632523275" duration="45000" />
+      <workItem from="1595632575253" duration="14000" />
+      <workItem from="1595632624691" duration="26000" />
+      <workItem from="1595673777311" duration="55000" />
+      <workItem from="1595673855580" duration="20610000" />
+      <workItem from="1595762842920" duration="13920000" />
+      <workItem from="1595875151803" duration="10583000" />
+      <workItem from="1595967924969" duration="2743000" />
+      <workItem from="1596044618951" duration="4379000" />
+      <workItem from="1596224711722" duration="7816000" />
+      <workItem from="1596279595760" duration="12297000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" width="1440" height="801" key="#JavaScript" timestamp="1595005757784">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="321" y="23" width="1078" height="798" key="#JavaScript/0.23.1440.798@0.23.1440.798" timestamp="1594997627239" />
+    <state x="0" y="23" width="1440" height="801" key="#JavaScript/0.23.1440.801@0.23.1440.801" timestamp="1595005757784" />
+    <state x="184" y="23" width="1081" height="798" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595001040937">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="184" y="23" width="1081" height="798" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.798@0.23.1440.798" timestamp="1595001040937" />
+    <state x="184" y="23" width="1081" height="801" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1594997817159" />
+    <state x="472" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595884024051">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="472" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.797@0.23.1440.797" timestamp="1595884024051" />
+    <state x="472" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.801@0.23.1440.801" timestamp="1595613701964" />
+    <state x="564" y="23" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595006591633">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="564" y="23" key="#com.intellij.ide.macro.MacrosDialog/0.23.1440.801@0.23.1440.801" timestamp="1595006591633" />
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595632456887">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.801@0.23.1440.801" timestamp="1595632456887" />
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595707871096">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.797@0.23.1440.797" timestamp="1595707871096" />
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.798@0.23.1440.798" timestamp="1595622550219" />
+    <state x="589" y="223" width="495" height="577" key="#com.intellij.tools.ToolEditorDialog" timestamp="1595007293920">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="589" y="223" width="495" height="577" key="#com.intellij.tools.ToolEditorDialog/0.23.1440.798@0.23.1440.798" timestamp="1595001733516" />
+    <state x="589" y="223" key="#com.intellij.tools.ToolEditorDialog/0.23.1440.801@0.23.1440.801" timestamp="1595007293920" />
+    <state x="471" y="284" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1594741314132">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="471" y="284" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.798@0.23.1440.798" timestamp="1594741314132" />
+    <state x="442" y="64" width="776" height="757" key="EditFileWatcherDialog" timestamp="1595006899745">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="442" y="64" width="776" height="757" key="EditFileWatcherDialog/0.23.1440.798@0.23.1440.798" timestamp="1594998393225" />
+    <state x="442" y="64" key="EditFileWatcherDialog/0.23.1440.801@0.23.1440.801" timestamp="1595006899745" />
+    <state x="205" y="113" key="IDE.errors.dialog" timestamp="1595009241819">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="205" y="113" key="IDE.errors.dialog/0.23.1440.804@0.23.1440.804" timestamp="1595009241819" />
+    <state x="144" y="79" key="MergeDialog" timestamp="1596298152600">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="79" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1596298152600" />
+    <state x="356" y="211" key="MultipleFileMergeDialog" timestamp="1596298152620">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="356" y="211" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1596298152620" />
+    <state x="229" y="23" key="SettingsEditor" timestamp="1595072624712">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="229" y="23" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1595072624712" />
+    <state x="229" y="23" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1595010713233" />
+    <state x="229" y="23" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1595011016458" />
+    <state width="623" height="500" key="SwitcherDM" timestamp="1595005874936">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state width="623" height="498" key="SwitcherDM/0.23.1440.801@0.23.1440.801" timestamp="1595002479862" />
+    <state width="623" height="500" key="SwitcherDM/0.23.1440.804@0.23.1440.804" timestamp="1595005874936" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2" timestamp="1595074465527">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.798@0.23.1440.798" timestamp="1595074465527" />
+    <state x="320" y="163" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1594664563104" />
+    <state x="320" y="164" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1595009991723" />
+    <state x="521" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596297657264">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1596297657264" />
+    <state x="470" y="236" key="git4idea.merge.GitMergeDialog" timestamp="1596297717778">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="470" y="236" key="git4idea.merge.GitMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1596297717778" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1595778707032">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.797@0.23.1440.797" timestamp="1595778707032" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1595072662758" />
+    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup" timestamp="1596298040114">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596298040114" />
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1595717549070" />
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1595072657369" />
+    <state x="385" y="148" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1594664427183" />
+  </component>
+</project>

@@ -1,26 +1,33 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import { Switch, Route } from 'react-router-dom';
 
-import Header from './components/Header';
+import Header from './shared/Header';
+import Footer from './shared/Footer';
 import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import Auth from './pages/Auth';
 
 const useClasses = makeStyles({
   root: {
-    height: '100vh',
+    minHeight: '100vh',
   },
 });
 
-function App() {
+const App = () => {
   const classes = useClasses();
 
   return (
     <div className={classes.root}>
-      <Fragment>
-        <Header />
-        <Dashboard />
-      </Fragment>
+      {/*<Header />*/}
+      <Switch>
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/auth" component={Auth} />
+        <Route exact path="/" component={Home} />
+      </Switch>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
