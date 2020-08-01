@@ -96,30 +96,30 @@ const LandingPage = () => {
 
   const handleCloseModal = () => setOpenModal(false);
 
+  const renderModalButtonProps = (to, color) => ({
+    fullWidth: true,
+    rel: 'noopener',
+    component: RouterLink,
+    className: classes.modalButton,
+    variant: 'contained',
+    to,
+    color,
+  });
+
+  const getStartedButtonProps = {
+    size: 'large',
+    variant: 'outlined',
+    color: 'primary',
+    onClick: handleOpenModal,
+  };
+
   return (
     <Fragment>
       <Modal open={openModal} handleClose={handleCloseModal}>
         <Typography>Log in to get your own, unique dashboard!</Typography>
-        <Button
-          fullWidth
-          component={RouterLink}
-          to="/auth"
-          className={classes.modalButton}
-          variant="contained"
-          color="primary"
-        >
-          LOG IN
-        </Button>
+        <Button {...renderModalButtonProps('/auth', 'primary')}>LOG IN</Button>
         <Typography>Screw that, let's jump right into this!</Typography>
-        <Button
-          fullWidth
-          rel="noopener"
-          component={RouterLink}
-          to="/dashboard"
-          className={classes.modalButton}
-          variant="contained"
-          color="secondary"
-        >
+        <Button {...renderModalButtonProps('/dashboard', 'secondary')}>
           GO TO DASHBOARD
         </Button>
       </Modal>
@@ -144,14 +144,7 @@ const LandingPage = () => {
                         SHOW MORE
                       </Button>
                     </ScrollLink>
-                    <Button
-                      size="large"
-                      variant="outlined"
-                      color="primary"
-                      onClick={handleOpenModal}
-                    >
-                      GET STARTED
-                    </Button>
+                    <Button {...getStartedButtonProps}>GET STARTED</Button>
                   </div>
                 </div>
               </div>

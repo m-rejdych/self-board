@@ -63,6 +63,23 @@ const Todo = ({ label, id }) => {
     }, 300);
   };
 
+  const cardHeaderProps = {
+    classes: { action: classes.actionButtons },
+    className: classes.cardHeader,
+    titleTypographyProps: { className: classes.title },
+    title: label,
+    action: (
+      <Fragment>
+        <IconButton onClick={() => setChecked(!checked)}>
+          <DoneIcon className={classes.doneIcon} />
+        </IconButton>
+        <IconButton onClick={handleDelete}>
+          <DeleteIcon className={classes.deleteIcon} />
+        </IconButton>
+      </Fragment>
+    ),
+  };
+
   return (
     <Card
       classes={{
@@ -73,22 +90,7 @@ const Todo = ({ label, id }) => {
         ),
       }}
     >
-      <CardHeader
-        classes={{ action: classes.actionButtons }}
-        className={classes.cardHeader}
-        titleTypographyProps={{ className: classes.title }}
-        title={label}
-        action={
-          <Fragment>
-            <IconButton onClick={() => setChecked(!checked)}>
-              <DoneIcon className={classes.doneIcon} />
-            </IconButton>
-            <IconButton onClick={handleDelete}>
-              <DeleteIcon className={classes.deleteIcon} />
-            </IconButton>
-          </Fragment>
-        }
-      />
+      <CardHeader {...cardHeaderProps} />
     </Card>
   );
 };

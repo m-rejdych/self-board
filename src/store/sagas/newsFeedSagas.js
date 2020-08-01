@@ -5,9 +5,13 @@ import { loadNewsSuccess, loadNewsFail } from '../actions';
 
 function* handleLoadNews({ payload }) {
   try {
+    const date = new Date()
+      .setMonth(new Date().getMonth() - 1)
+      .toLocaleString()
+      .replace('/', '-');
     const url = `http://newsapi.org/v2/${
       payload
-        ? `everything?language=en&q=${payload}`
+        ? `everything?language=en&from=${date}&q=${payload}`
         : `top-headlines?country=us&category=technology`
     }&apiKey=c6b68bf26c8c45558d70c4eca273cdc2`;
     const response = yield axios.get(url);

@@ -55,26 +55,30 @@ const NewsFeed = () => {
     setValue('');
   };
 
+  const textFieldProps = {
+    className: classes.searchBar,
+    value: value,
+    placeholder: 'Search',
+    variant: 'outlined',
+    InputProps: {
+      startAdornment: (
+        <InputAdornment
+          className={classes.inputAdornment}
+          onClick={handleSearch}
+        >
+          <SearchIcon />
+        </InputAdornment>
+      ),
+    },
+  };
+
   return (
     <Grid className={classes.root} container spacing={4}>
       <Grid item className={classes.searchBarContainer} xs={12}>
         <TextField
-          className={classes.searchBar}
-          value={value}
-          placeholder="Search"
+          {...textFieldProps}
           onChange={(event) => setValue(event.target.value)}
           onKeyPress={(event) => event.key === 'Enter' && handleSearch()}
-          variant="outlined"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment
-                className={classes.inputAdornment}
-                onClick={handleSearch}
-              >
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
         />
       </Grid>
       {loading ? (
