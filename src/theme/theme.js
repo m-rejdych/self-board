@@ -7,6 +7,9 @@ const theme = createMuiTheme({
     secondary: pink,
     type: 'dark',
   },
+  typography: {
+    fontFamily: 'Roboto Slab, Roboto, Helvetica, sans-serif',
+  },
 });
 
 export default theme;
