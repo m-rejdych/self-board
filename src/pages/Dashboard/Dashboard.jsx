@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Paper, makeStyles } from '@material-ui/core';
 
-import DashboardTabs from '../../components/Tabs';
+import DashboardTabs from '../../components/DashboardTabs';
 
 const useClasses = makeStyles((theme) => ({
   root: {

@@ -1,10 +1,16 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles, TextField, IconButton, Divider } from '@material-ui/core';
+import {
+  makeStyles,
+  TextField,
+  Divider,
+  CircularProgress,
+  Box,
+} from '@material-ui/core';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 import Todo from './Todo';
-import { updateTodos } from '../../store/actions';
+import { updateTodos, postTodo, loadTodos } from '../../store/actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,22 +23,34 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     fontSize: 40,
+    cursor: 'pointer',
   },
 }));
 
 const Todos = () => {
   const classes = useStyles();
   const todos = useSelector((state) => state.todos.todos);
+  const userId = useSelector((state) => state.auth.userId);
+  const token = useSelector((state) => state.auth.token);
+  const loading = useSelector((state) => state.todos.loading);
   const dispatch = useDispatch();
-
   const [inputValue, setInputValue] = useState('');
 
+  useEffect(() => {
+    userId && dispatch(loadTodos({ userId, token }));
+  }, [userId, token, dispatch]);
+
   const handleClick = () => {
-    inputValue &&
-      dispatch(
-        updateTodos([...todos, { todo: inputValue, id: Math.random() }]),
-      );
-    setInputValue('');
+    if (inputValue) {
+      const todo = {
+        todo: inputValue,
+        id: `id-${Math.floor(Math.random() * 10000)}`,
+      };
+      userId
+        ? dispatch(postTodo({ todo, userId, token }))
+        : dispatch(updateTodos([...todos, todo]));
+      setInputValue('');
+    }
   };
 
   const handleEnterPress = (event) => {
@@ -62,6 +80,11 @@ const Todos = () => {
       {todos.map(({ todo, id }) => (
         <Todo key={id} id={id} label={todo} />
       ))}
+      {loading && (
+        <Box display="flex" justifyContent="center">
+          <CircularProgress size={100} />
+        </Box>
+      )}
     </Fragment>
   );
 };

@@ -6,7 +6,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import { red, green } from '@material-ui/core/colors';
 import { Card, CardHeader, IconButton, makeStyles } from '@material-ui/core';
 
-import { updateTodos } from '../../../store/actions';
+import { updateTodos, deleteTodo } from '../../../store/actions';
 
 const useClasses = makeStyles((theme) => ({
   '@keyframes inputEnter': {
@@ -46,16 +46,20 @@ const useClasses = makeStyles((theme) => ({
 const Todo = ({ label, id }) => {
   const classes = useClasses();
   const todos = useSelector((state) => state.todos.todos);
+  const userId = useSelector((state) => state.auth.userId);
+  const token = useSelector((state) => state.auth.token);
   const dispatch = useDispatch();
 
   const [checked, setChecked] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
   const handleDelete = () => {
-    const updatedTodos = todos.filter((todo) => todo.id !== id);
     setDeleted(true);
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTimeout(() => {
-      dispatch(updateTodos(updatedTodos));
+      userId
+        ? dispatch(deleteTodo({ id, token }))
+        : dispatch(updateTodos(updatedTodos));
     }, 300);
   };
 

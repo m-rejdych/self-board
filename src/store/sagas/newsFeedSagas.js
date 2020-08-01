@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { NEWS_FEED } from '../constans';
 import { put, takeEvery } from 'redux-saga/effects';
-import { setLoadNews, setLoadNewsError } from '../actions';
+import { loadNewsSuccess, loadNewsFail } from '../actions';
 
 function* handleLoadNews(action) {
   try {
@@ -11,14 +11,14 @@ function* handleLoadNews(action) {
     const newsFeed = response.data.articles
       .filter((item) => item.urlToImage && item.author)
       .slice(0, 12);
-    yield put(setLoadNews(newsFeed));
+    yield put(loadNewsSuccess(newsFeed));
   } catch (error) {
-    yield put(setLoadNewsError(error));
+    yield put(loadNewsFail(error));
   }
 }
 
-function* loadNews() {
+function* setLoadNews() {
   yield takeEvery(NEWS_FEED.LOAD_NEWS, handleLoadNews);
 }
 
-export { loadNews };
+export { setLoadNews };

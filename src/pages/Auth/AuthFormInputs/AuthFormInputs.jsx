@@ -74,12 +74,12 @@ const AuthFormInputs = ({ values }) => {
     ({ name, validate, ...rest }) =>
       name && (
         <Field key={name} validate={validate} name={name}>
-          {({ field, meta }) => (
+          {({ field, meta: { error, touched } }) => (
             <TextField
               {...rest}
               {...field}
-              error={meta.error && meta.touched}
-              helperText={meta.error && meta.touched && meta.error}
+              error={error && touched}
+              helperText={error && touched && error}
               className={classes.textField}
               variant="outlined"
             />

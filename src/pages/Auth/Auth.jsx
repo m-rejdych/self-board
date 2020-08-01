@@ -83,11 +83,17 @@ const Auth = ({ history }) => {
   return (
     <Container maxWidth="sm" className={classes.root}>
       {loading ? (
-        <CircularProgress />
+        <CircularProgress size={100} />
       ) : (
         <Formik initialValues={initialValues}>
           {({ values, isValid, dirty, handleReset }) => (
-            <Card elevation={3} className={classes.card}>
+            <Card
+              elevation={3}
+              className={classes.card}
+              onKeyPress={(event) =>
+                event.key === 'Enter' && handleSubmit(values)
+              }
+            >
               <CardHeader
                 title={loginMode ? 'LOG IN' : 'SIGN UP'}
                 action={

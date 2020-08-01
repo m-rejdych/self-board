@@ -2,6 +2,7 @@ import { AUTH } from '../constans';
 
 const initialState = {
   email: '',
+  name: '',
   token: '',
   refreshToken: '',
   expirationTime: '',
@@ -15,7 +16,7 @@ const authReducer = (state = initialState, { type, payload }) => {
     case AUTH.AUTH:
       return { ...state, loading: true };
     case AUTH.AUTH_SUCCESS:
-      return { ...state, loading: false, ...payload };
+      return { ...state, loading: false, error: null, ...payload };
     case AUTH.AUTH_FAIL:
       return { ...state, loading: false, error: payload };
     case AUTH.RESET_ERROR:
