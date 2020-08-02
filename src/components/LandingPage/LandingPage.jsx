@@ -5,7 +5,7 @@ import { Typography, Button, makeStyles } from '@material-ui/core';
 import { Link as ScrollLink } from 'react-scroll';
 
 import { ReactComponent as LandingPageSvg } from '../../assets/LandingPageSvg.svg';
-import Modal from '../UI/Modal';
+import Dialog from '../UI/Dialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +32,11 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     zIndex: 2,
   },
+  modalButtonsMargin: {
+    '&:not(:last-child)': {
+      marginBottom: theme.spacing(1),
+    },
+  },
   buttonsContainer: {
     position: 'relative',
     alignSelf: 'center',
@@ -39,9 +44,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     width: theme.spacing(40),
     top: theme.spacing(5),
-  },
-  modalButton: {
-    margin: `${theme.spacing(2)}px auto`,
   },
   landingSvg: {
     width: 650,
@@ -92,67 +94,69 @@ const LandingPage = () => {
   const classes = useStyles();
   const [openModal, setOpenModal] = useState(false);
 
-  const handleOpenModal = () => setOpenModal(true);
+  const getStartedButtonProps = {
+    size: 'large',
+    variant: 'outlined',
+    color: 'primary',
+    onClick: () => setOpenModal(true),
+  };
 
-  const handleCloseModal = () => setOpenModal(false);
-
-  const renderModalButtonProps = (to, color) => ({
+  const renderDialogButtonProps = (to, color) => ({
+    className: classes.modalButtonsMargin,
     fullWidth: true,
     rel: 'noopener',
     component: RouterLink,
-    className: classes.modalButton,
     variant: 'contained',
     to,
     color,
   });
 
-  const getStartedButtonProps = {
-    size: 'large',
-    variant: 'outlined',
-    color: 'primary',
-    onClick: handleOpenModal,
+  const parallaxLayers = [
+    {
+      children: (
+        <div className={classes.root}>
+          <LandingPageSvg className={classes.landingSvg} />
+          <div className={classes.textContainer}>
+            <div className={classes.square} />
+            <Typography className={classes.typography} variant="h1">
+              Self Board
+            </Typography>
+            <Typography className={classes.typography} variant="h4">
+              Your daily guide
+            </Typography>
+            <div className={classes.buttonsContainer}>
+              <ScrollLink smooth duration={500} to="info">
+                <Button size="large" color="secondary">
+                  SHOW MORE
+                </Button>
+              </ScrollLink>
+              <Button {...getStartedButtonProps}>GET STARTED</Button>
+            </div>
+          </div>
+        </div>
+      ),
+      amount: 0.5,
+    },
+  ];
+
+  const dialogProps = {
+    open: openModal,
+    handleClose: () => setOpenModal(false),
+    title: 'Log in to get your own, unique dashboard!',
+    actions: (
+      <Fragment>
+        <Button {...renderDialogButtonProps('/auth', 'primary')}>Log In</Button>
+        <Button {...renderDialogButtonProps('/dashboard', 'secondary')}>
+          Screw that, let's jump right into this!
+        </Button>
+      </Fragment>
+    ),
   };
 
   return (
     <Fragment>
-      <Modal open={openModal} handleClose={handleCloseModal}>
-        <Typography>Log in to get your own, unique dashboard!</Typography>
-        <Button {...renderModalButtonProps('/auth', 'primary')}>LOG IN</Button>
-        <Typography>Screw that, let's jump right into this!</Typography>
-        <Button {...renderModalButtonProps('/dashboard', 'secondary')}>
-          GO TO DASHBOARD
-        </Button>
-      </Modal>
-      <ParallaxBanner
-        style={{ height: '100vh' }}
-        layers={[
-          {
-            children: (
-              <div className={classes.root}>
-                <LandingPageSvg className={classes.landingSvg} />
-                <div className={classes.textContainer}>
-                  <div className={classes.square} />
-                  <Typography className={classes.typography} variant="h1">
-                    Self Board
-                  </Typography>
-                  <Typography className={classes.typography} variant="h4">
-                    Your daily guide
-                  </Typography>
-                  <div className={classes.buttonsContainer}>
-                    <ScrollLink smooth duration={500} to="info">
-                      <Button size="large" color="secondary">
-                        SHOW MORE
-                      </Button>
-                    </ScrollLink>
-                    <Button {...getStartedButtonProps}>GET STARTED</Button>
-                  </div>
-                </div>
-              </div>
-            ),
-            amount: 0.5,
-          },
-        ]}
-      />
+      <Dialog {...dialogProps} />
+      <ParallaxBanner style={{ height: '100vh' }} layers={parallaxLayers} />
     </Fragment>
   );
 };

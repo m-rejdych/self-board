@@ -53,12 +53,6 @@ const Todos = () => {
     }
   };
 
-  const handleEnterPress = (event) => {
-    if (event.key === 'Enter') {
-      handleClick();
-    }
-  };
-
   const textFieldProps = {
     fullWidth: true,
     value: inputValue,
@@ -72,7 +66,7 @@ const Todos = () => {
         <TextField
           {...textFieldProps}
           onChange={(event) => setInputValue(event.target.value)}
-          onKeyPress={(event) => handleEnterPress(event)}
+          onKeyPress={(event) => event.key === 'Enter' && handleClick()}
         />
         <AddBoxIcon
           onClick={handleClick}

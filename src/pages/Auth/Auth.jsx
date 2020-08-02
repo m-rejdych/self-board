@@ -14,6 +14,7 @@ import {
   CircularProgress,
 } from '@material-ui/core';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 
 import AuthFormInputs from './AuthFormInputs';
@@ -97,7 +98,7 @@ const Auth = ({ history }) => {
               <CardHeader
                 title={loginMode ? 'LOG IN' : 'SIGN UP'}
                 action={
-                  <IconButton href="/">
+                  <IconButton component={Link} rel="noopener" to="/">
                     <ArrowBackIosIcon />
                   </IconButton>
                 }
