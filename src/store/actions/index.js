@@ -9,6 +9,10 @@ export {
   deleteTodo,
   deleteTodosSuccess,
   deleteTodosFail,
+  checkTodo,
+  patchCheckTodo,
+  patchCheckTodoSuccess,
+  patchCheckTodoFail,
 } from './todosActions';
 export { loadNews, loadNewsSuccess, loadNewsFail } from './newsFeedActions';
 export { updateCalendar } from './calendarActions';

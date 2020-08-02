@@ -59,7 +59,7 @@ const Calendar = () => {
     <Fragment>
       <Snackbar
         severity="info"
-        message="Double click on a field to add and appointment"
+        message="Double click on a field to add an appointment"
       />
       <Scheduler firstDayOfWeek={1} data={appointments}>
         <ViewState

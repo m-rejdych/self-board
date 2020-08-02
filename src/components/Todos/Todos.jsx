@@ -45,6 +45,7 @@ const Todos = () => {
       const todo = {
         todo: inputValue,
         id: `id-${Math.floor(Math.random() * 10000)}`,
+        checked: false,
       };
       userId
         ? dispatch(postTodo({ todo, userId, token }))
@@ -75,9 +76,10 @@ const Todos = () => {
         />
       </div>
       <Divider />
-      {todos.map(({ todo, id }) => (
-        <Todo key={id} id={id} label={todo} />
-      ))}
+      {todos.map(({ todo, id, checked }) => {
+        console.log(todo, id, checked);
+        return <Todo key={id} id={id} label={todo} checked={checked} />;
+      })}
       {loading && (
         <Box display="flex" justifyContent="center">
           <CircularProgress size={100} />

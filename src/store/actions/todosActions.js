@@ -40,6 +40,22 @@ const deleteTodosFail = (error) => ({
   type: TODOS.DELETE_TODO_FAIL,
   payload: error,
 });
+const checkTodo = (todos) => ({
+  type: TODOS.CHECK_TODO,
+  payload: todos,
+});
+const patchCheckTodo = (data) => ({
+  type: TODOS.PATCH_CHECK_TODO,
+  payload: data,
+});
+const patchCheckTodoSuccess = (todo) => ({
+  type: TODOS.PATCH_CHECK_TODO_SUCCESS,
+  payload: todo,
+});
+const patchCheckTodoFail = (error) => ({
+  type: TODOS.PATCH_CHECK_TODO_FAIL,
+  payload: error,
+});
 
 export {
   updateTodos,
@@ -52,4 +68,8 @@ export {
   deleteTodo,
   deleteTodosSuccess,
   deleteTodosFail,
+  checkTodo,
+  patchCheckTodo,
+  patchCheckTodoSuccess,
+  patchCheckTodoFail,
 };

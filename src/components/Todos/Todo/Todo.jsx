@@ -6,7 +6,12 @@ import DoneIcon from '@material-ui/icons/Done';
 import { red, green } from '@material-ui/core/colors';
 import { Card, CardHeader, IconButton, makeStyles } from '@material-ui/core';
 
-import { updateTodos, deleteTodo } from '../../../store/actions';
+import {
+  updateTodos,
+  deleteTodo,
+  checkTodo,
+  patchCheckTodo,
+} from '../../../store/actions';
 
 const useClasses = makeStyles((theme) => ({
   '@keyframes inputEnter': {
@@ -43,14 +48,13 @@ const useClasses = makeStyles((theme) => ({
   },
 }));
 
-const Todo = ({ label, id }) => {
+const Todo = ({ label, id, checked }) => {
   const classes = useClasses();
   const todos = useSelector((state) => state.todos.todos);
   const userId = useSelector((state) => state.auth.userId);
   const token = useSelector((state) => state.auth.token);
   const dispatch = useDispatch();
 
-  const [checked, setChecked] = useState(false);
   const [deleted, setDeleted] = useState(false);
 
   const handleDelete = () => {
@@ -63,6 +67,16 @@ const Todo = ({ label, id }) => {
     }, 300);
   };
 
+  const handleCheck = () => {
+    const updatedTodos = todos.map((todo) =>
+      id === todo.id ? { ...todo, checked: !todo.checked } : todo,
+    );
+    const todo = todos.find((todo) => todo.id === id);
+    userId
+      ? dispatch(patchCheckTodo({ checked: !todo.checked, id, token }))
+      : dispatch(checkTodo(updatedTodos));
+  };
+
   const cardHeaderProps = {
     classes: { action: classes.actionButtons },
     className: classes.cardHeader,
@@ -70,7 +84,7 @@ const Todo = ({ label, id }) => {
     title: label,
     action: (
       <Fragment>
-        <IconButton onClick={() => setChecked(!checked)}>
+        <IconButton onClick={handleCheck}>
           <DoneIcon className={classes.doneIcon} />
         </IconButton>
         <IconButton onClick={handleDelete}>
