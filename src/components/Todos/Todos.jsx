@@ -44,7 +44,7 @@ const Todos = () => {
     if (inputValue) {
       const todo = {
         todo: inputValue,
-        id: `id-${Math.floor(Math.random() * 10000)}`,
+        id: `id-${Math.floor(Math.random() * 1000000)}`,
         checked: false,
       };
       userId
@@ -77,7 +77,6 @@ const Todos = () => {
       </div>
       <Divider />
       {todos.map(({ todo, id, checked }) => {
-        console.log(todo, id, checked);
         return <Todo key={id} id={id} label={todo} checked={checked} />;
       })}
       {loading && (

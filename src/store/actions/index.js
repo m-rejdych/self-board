@@ -15,6 +15,14 @@ export {
   patchCheckTodoFail,
 } from './todosActions';
 export { loadNews, loadNewsSuccess, loadNewsFail } from './newsFeedActions';
-export { updateCalendar } from './calendarActions';
+export {
+  updateCalendar,
+  postAppointment,
+  postAppointmentSuccess,
+  postAppointmentFail,
+  loadAppointments,
+  loadAppointmentsSuccess,
+  loadAppointmentsFail,
+} from './calendarActions';
 export { auth, authSuccess, authFail, authResetError } from './authActions';
 export { setLoginMode } from './userActions';

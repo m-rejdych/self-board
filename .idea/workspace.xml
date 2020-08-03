@@ -13,14 +13,12 @@
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todo/Todo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/calendarActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/calendarActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/todosActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/todosActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/constans/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/todosReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/sagas/todosSagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/todosSagas.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,8 @@
       <workItem from="1596279595760" duration="12297000" />
       <workItem from="1596317726295" duration="265000" />
       <workItem from="1596365437951" duration="3985000" />
-      <workItem from="1596398206950" duration="4214000" />
+      <workItem from="1596398206950" duration="4617000" />
+      <workItem from="1596478652294" duration="7875000" />
     </task>
     <servers />
   </component>
@@ -185,22 +184,22 @@
     </state>
     <state x="442" y="64" width="776" height="757" key="EditFileWatcherDialog/0.23.1440.798@0.23.1440.798" timestamp="1594998393225" />
     <state x="442" y="64" key="EditFileWatcherDialog/0.23.1440.801@0.23.1440.801" timestamp="1595006899745" />
-    <state width="1398" height="240" key="GridCell.Tab.0.bottom" timestamp="1596400126483">
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom" timestamp="1596403004117">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596400126483" />
-    <state width="1398" height="240" key="GridCell.Tab.0.center" timestamp="1596400126481">
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596403004117" />
+    <state width="1398" height="240" key="GridCell.Tab.0.center" timestamp="1596403004115">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596400126481" />
-    <state width="1398" height="240" key="GridCell.Tab.0.left" timestamp="1596400126480">
+    <state width="1398" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596403004115" />
+    <state width="1398" height="240" key="GridCell.Tab.0.left" timestamp="1596403004115">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596400126480" />
-    <state width="1398" height="240" key="GridCell.Tab.0.right" timestamp="1596400126482">
+    <state width="1398" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596403004115" />
+    <state width="1398" height="240" key="GridCell.Tab.0.right" timestamp="1596403004116">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596400126482" />
+    <state width="1398" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596403004116" />
     <state x="205" y="113" key="IDE.errors.dialog" timestamp="1595009241819">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -243,10 +242,10 @@
     </state>
     <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.797@0.23.1440.797" timestamp="1595778707032" />
     <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.798@0.23.1440.798" timestamp="1595072662758" />
-    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup" timestamp="1596298040114">
+    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup" timestamp="1596490334643">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596298040114" />
+    <state x="385" y="141" width="670" height="764" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596490334643" />
     <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1595717549070" />
     <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.798@0.23.1440.798" timestamp="1595072657369" />
     <state x="385" y="148" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1594664427183" />
