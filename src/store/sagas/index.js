@@ -1,7 +1,18 @@
 import { all } from 'redux-saga/effects';
 import { setLoadNews } from './newsFeedSagas';
 import { setAuth } from './authSagas';
-import { setPostTodo, setLoadTodos, setDeleteTodo } from './todosSagas';
+import {
+  setPostTodo,
+  setLoadTodos,
+  setDeleteTodo,
+  setPatchCheckTodo,
+} from './todosSagas';
+import {
+  setPostAppointment,
+  setLoadAppointments,
+  setUpdateAppointments,
+  setDeleteAppointment,
+} from './calendarSagas';
 
 function* rootSaga() {
   yield all([
@@ -10,6 +21,11 @@ function* rootSaga() {
     setPostTodo(),
     setLoadTodos(),
     setDeleteTodo(),
+    setPatchCheckTodo(),
+    setPostAppointment(),
+    setLoadAppointments(),
+    setUpdateAppointments(),
+    setDeleteAppointment(),
   ]);
 }
 

@@ -32,6 +32,20 @@ const todosReducer = (state = initialState, { type, payload }) => {
       };
     case TODOS.DELETE_TODO_FAIL:
       return { ...state, loading: false, error: payload };
+    case TODOS.CHECK_TODO:
+      return { ...state, todos: payload };
+    case TODOS.PATCH_CHECK_TODO:
+      return { ...state, loading: true };
+    case TODOS.PATCH_CHECK_TODO_SUCCESS:
+      return {
+        error: null,
+        loading: false,
+        todos: state.todos.map((todo) =>
+          payload.id === todo.id ? { ...todo, checked: payload.checked } : todo,
+        ),
+      };
+    case TODOS.PATCH_CHECK_TODO_FAIL:
+      return { ...state, loading: false, error: payload };
     default:
       return state;
   }
