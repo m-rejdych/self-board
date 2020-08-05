@@ -13,11 +13,10 @@
     <list default="true" id="1dfa8d01-4e49-4871-ac1c-1c71f944a1a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Calendar/Calendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todos/Todos.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/calendarActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/calendarActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/constans/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/calendarReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/sagas/calendarSagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/calendarSagas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/sagas/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +109,8 @@
       <workItem from="1596317726295" duration="265000" />
       <workItem from="1596365437951" duration="3985000" />
       <workItem from="1596398206950" duration="4617000" />
-      <workItem from="1596478652294" duration="7875000" />
+      <workItem from="1596478652294" duration="8019000" />
+      <workItem from="1596655115360" duration="3457000" />
     </task>
     <servers />
   </component>

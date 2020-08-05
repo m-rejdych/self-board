@@ -5,6 +5,10 @@ import {
   postAppointmentFail,
   loadAppointmentsSuccess,
   loadAppointmentsFail,
+  updateAppointmentSuccess,
+  updateAppointmentFail,
+  deleteAppointmentSuccess,
+  deleteAppointmentFail,
 } from '../actions';
 import { CALENDAR } from '../constans';
 
@@ -38,6 +42,26 @@ function* handlePostAppointment({
   }
 }
 
+function* handleUpdateAppointment({ payload: { appointment, token } }) {
+  try {
+    yield axios.patch(`/appointments/${appointment.id}.json?auth=${token}`, {
+      appointment,
+    });
+    yield put(updateAppointmentSuccess(appointment));
+  } catch (error) {
+    yield put(updateAppointmentFail(error.message));
+  }
+}
+
+function* handleDeleteAppointment({ payload: { id, token } }) {
+  try {
+    yield axios.delete(`/appointments/${id}.json?auth=${token}`);
+    yield put(deleteAppointmentSuccess(id));
+  } catch (error) {
+    yield put(deleteAppointmentFail(error.message));
+  }
+}
+
 function* setPostAppointment(action) {
   yield takeEvery(CALENDAR.POST_APPOINTMENT, handlePostAppointment);
 }
@@ -46,4 +70,16 @@ function* setLoadAppointments(action) {
   yield takeEvery(CALENDAR.LOAD_APPOINTMENTS, handleLoadAppointments);
 }
 
-export { setPostAppointment, setLoadAppointments };
+function* setUpdateAppointments(action) {
+  yield takeEvery(CALENDAR.UPDATE_APPOINTMENT, handleUpdateAppointment);
+}
+
+function* setDeleteAppointment(action) {
+  yield takeEvery(CALENDAR.DELETE_APPOINTMENT, handleDeleteAppointment);
+}
+export {
+  setPostAppointment,
+  setLoadAppointments,
+  setUpdateAppointments,
+  setDeleteAppointment,
+};

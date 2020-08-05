@@ -7,7 +7,12 @@ import {
   setDeleteTodo,
   setPatchCheckTodo,
 } from './todosSagas';
-import { setPostAppointment, setLoadAppointments } from './calendarSagas';
+import {
+  setPostAppointment,
+  setLoadAppointments,
+  setUpdateAppointments,
+  setDeleteAppointment,
+} from './calendarSagas';
 
 function* rootSaga() {
   yield all([
@@ -19,6 +24,8 @@ function* rootSaga() {
     setPatchCheckTodo(),
     setPostAppointment(),
     setLoadAppointments(),
+    setUpdateAppointments(),
+    setDeleteAppointment(),
   ]);
 }
 

@@ -24,6 +24,8 @@ import {
   updateCalendar,
   postAppointment,
   loadAppointments,
+  updateAppointment,
+  deleteAppointment,
 } from '../../store/actions';
 import Snackbar from '../UI/Snackbar';
 
@@ -62,11 +64,17 @@ const Calendar = () => {
         const changedApointment = changed[appointment.id]
           ? { ...appointment, ...changed[appointment.id] }
           : appointment;
+        userId &&
+          changed[changedApointment.id] &&
+          dispatch(
+            updateAppointment({ appointment: changedApointment, token }),
+          );
         return changedApointment;
       });
     }
 
     if (deleted !== undefined) {
+      userId && dispatch(deleteAppointment({ id: deleted, token }));
       newAppointments = appointments.filter(
         (appointment) => appointment.id !== deleted,
       );

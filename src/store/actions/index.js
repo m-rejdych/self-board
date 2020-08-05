@@ -23,6 +23,12 @@ export {
   loadAppointments,
   loadAppointmentsSuccess,
   loadAppointmentsFail,
+  updateAppointment,
+  updateAppointmentSuccess,
+  updateAppointmentFail,
+  deleteAppointment,
+  deleteAppointmentSuccess,
+  deleteAppointmentFail,
 } from './calendarActions';
 export { auth, authSuccess, authFail, authResetError } from './authActions';
 export { setLoginMode } from './userActions';

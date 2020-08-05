@@ -28,6 +28,30 @@ const postAppointmentFail = (error) => ({
   type: CALENDAR.POST_APPOINTMENT_FAIL,
   payload: error,
 });
+const updateAppointment = (data) => ({
+  type: CALENDAR.UPDATE_APPOINTMENT,
+  payload: data,
+});
+const updateAppointmentSuccess = (appointment) => ({
+  type: CALENDAR.UPDATE_APPOINTMENT_SUCCESS,
+  payload: appointment,
+});
+const updateAppointmentFail = (error) => ({
+  type: CALENDAR.UPDATE_APPOINTMENT_FAIL,
+  payload: error,
+});
+const deleteAppointment = (data) => ({
+  type: CALENDAR.DELETE_APPOINTMENT,
+  payload: data,
+});
+const deleteAppointmentSuccess = (id) => ({
+  type: CALENDAR.DELETE_APPOINTMENT_SUCCESS,
+  payload: id,
+});
+const deleteAppointmentFail = (error) => ({
+  type: CALENDAR.DELETE_APPOINTMENT_FAIL,
+  payload: error,
+});
 
 export {
   updateCalendar,
@@ -37,4 +61,10 @@ export {
   postAppointment,
   postAppointmentSuccess,
   postAppointmentFail,
+  updateAppointment,
+  updateAppointmentSuccess,
+  updateAppointmentFail,
+  deleteAppointment,
+  deleteAppointmentSuccess,
+  deleteAppointmentFail,
 };

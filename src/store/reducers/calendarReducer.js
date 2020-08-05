@@ -31,6 +31,32 @@ const calendarReducer = (state = initialState, { type, payload }) => {
       };
     case CALENDAR.POST_APPOINTMENT_FAIL:
       return { ...state, loading: false, error: payload };
+    case CALENDAR.UPDATE_APPOINTMENT:
+      return { ...state, loading: true };
+    case CALENDAR.UPDATE_APPOINTMENT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        appointments: state.appointments.map((appointment) =>
+          appointment.id === payload.id ? payload : appointment,
+        ),
+      };
+    case CALENDAR.UPDATE_APPOINTMENT_FAIL:
+      return { ...state, loading: false, error: payload };
+    case CALENDAR.DELETE_APPOINTMENT:
+      return { ...state, loading: true };
+    case CALENDAR.DELETE_APPOINTMENT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        appointments: state.appointments.filter(
+          (appointment) => appointment.id !== payload,
+        ),
+      };
+    case CALENDAR.DELETE_APPOINTMENT_FAIL:
+      return { ...state, loading: false, error: payload };
     default:
       return state;
   }
