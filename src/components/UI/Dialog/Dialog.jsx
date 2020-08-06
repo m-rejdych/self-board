@@ -21,15 +21,13 @@ const TransitionComponent = React.forwardRef((props, ref) => (
 const DialogComponent = ({ handleClose, open, title, actions }) => {
   const classes = useStyles();
 
-  const dialogProps = {
-    open,
-    TransitionComponent,
-    keepMounted: true,
-    onClose: handleClose,
-  };
-
   return (
-    <Dialog {...dialogProps}>
+    <Dialog
+      open
+      TransitionComponent={TransitionComponent}
+      keepMounted
+      onClose={handleClose}
+    >
       <DialogTitle>{title}</DialogTitle>
       <DialogActions disableSpacing className={classes.actions}>
         {actions}

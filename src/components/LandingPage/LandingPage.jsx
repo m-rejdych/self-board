@@ -94,23 +94,6 @@ const LandingPage = () => {
   const classes = useStyles();
   const [openModal, setOpenModal] = useState(false);
 
-  const getStartedButtonProps = {
-    size: 'large',
-    variant: 'outlined',
-    color: 'primary',
-    onClick: () => setOpenModal(true),
-  };
-
-  const renderDialogButtonProps = (to, color) => ({
-    className: classes.modalButtonsMargin,
-    fullWidth: true,
-    rel: 'noopener',
-    component: RouterLink,
-    variant: 'contained',
-    to,
-    color,
-  });
-
   const parallaxLayers = [
     {
       children: (
@@ -130,7 +113,14 @@ const LandingPage = () => {
                   SHOW MORE
                 </Button>
               </ScrollLink>
-              <Button {...getStartedButtonProps}>GET STARTED</Button>
+              <Button
+                size="large"
+                variant="outlined"
+                color="primary"
+                onClick={() => setOpenModal(true)}
+              >
+                GET STARTED
+              </Button>
             </div>
           </div>
         </div>
@@ -145,8 +135,26 @@ const LandingPage = () => {
     title: 'Log in to get your own, unique dashboard!',
     actions: (
       <Fragment>
-        <Button {...renderDialogButtonProps('/auth', 'primary')}>Log In</Button>
-        <Button {...renderDialogButtonProps('/dashboard', 'secondary')}>
+        <Button
+          className={classes.modalButtonsMargin}
+          fullWidth
+          rel="noopener"
+          component={RouterLink}
+          variant="contained"
+          to="/auth"
+          color="primary"
+        >
+          Log In
+        </Button>
+        <Button
+          className={classes.modalButtonsMargin}
+          fullWidth
+          rel="noopener"
+          component={RouterLink}
+          variant="contained"
+          to="/dashboard"
+          color="secondary"
+        >
           Screw that, let's jump right into this!
         </Button>
       </Fragment>

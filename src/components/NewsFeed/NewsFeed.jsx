@@ -45,6 +45,7 @@ const NewsFeed = () => {
   const news = useSelector((state) => state.newsFeed.newsFeed);
   const loading = useSelector((state) => state.newsFeed.loading);
   const [value, setValue] = useState('');
+  const [placeholder, setPlaceholder] = useState('Search');
 
   useEffect(() => {
     dispatch(loadNews());
@@ -52,31 +53,28 @@ const NewsFeed = () => {
 
   const handleSearch = () => {
     dispatch(loadNews(value));
+    setPlaceholder(value);
     setValue('');
-  };
-
-  const textFieldProps = {
-    className: classes.searchBar,
-    value: value,
-    placeholder: 'Search',
-    variant: 'outlined',
-    InputProps: {
-      startAdornment: (
-        <InputAdornment
-          className={classes.inputAdornment}
-          onClick={handleSearch}
-        >
-          <SearchIcon />
-        </InputAdornment>
-      ),
-    },
   };
 
   return (
     <Grid className={classes.root} container spacing={4}>
       <Grid item className={classes.searchBarContainer} xs={12}>
         <TextField
-          {...textFieldProps}
+          className={classes.searchBar}
+          value={value}
+          placeholder={placeholder}
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment
+                className={classes.inputAdornment}
+                onClick={handleSearch}
+              >
+                <SearchIcon />
+              </InputAdornment>
+            ),
+          }}
           onChange={(event) => setValue(event.target.value)}
           onKeyPress={(event) => event.key === 'Enter' && handleSearch()}
         />

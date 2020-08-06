@@ -54,18 +54,14 @@ const Todos = () => {
     }
   };
 
-  const textFieldProps = {
-    fullWidth: true,
-    value: inputValue,
-    label: 'New Todo',
-    type: 'text',
-  };
-
   return (
     <Fragment>
       <div className={classes.root}>
         <TextField
-          {...textFieldProps}
+          fullWidth
+          value={inputValue}
+          label="New Todo"
+          type="text"
           onChange={(event) => setInputValue(event.target.value)}
           onKeyPress={(event) => event.key === 'Enter' && handleClick()}
         />
