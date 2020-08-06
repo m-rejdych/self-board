@@ -129,41 +129,39 @@ const LandingPage = () => {
     },
   ];
 
-  const dialogProps = {
-    open: openModal,
-    handleClose: () => setOpenModal(false),
-    title: 'Log in to get your own, unique dashboard!',
-    actions: (
-      <Fragment>
-        <Button
-          className={classes.modalButtonsMargin}
-          fullWidth
-          rel="noopener"
-          component={RouterLink}
-          variant="contained"
-          to="/auth"
-          color="primary"
-        >
-          Log In
-        </Button>
-        <Button
-          className={classes.modalButtonsMargin}
-          fullWidth
-          rel="noopener"
-          component={RouterLink}
-          variant="contained"
-          to="/dashboard"
-          color="secondary"
-        >
-          Screw that, let's jump right into this!
-        </Button>
-      </Fragment>
-    ),
-  };
-
   return (
     <Fragment>
-      <Dialog {...dialogProps} />
+      <Dialog
+        open={openModal}
+        handleClose={() => setOpenModal(false)}
+        title="Log in to get your own, unique dashboard!"
+        actions={
+          <Fragment>
+            <Button
+              className={classes.modalButtonsMargin}
+              fullWidth
+              rel="noopener"
+              component={RouterLink}
+              variant="contained"
+              to="/auth"
+              color="primary"
+            >
+              Log In
+            </Button>
+            <Button
+              className={classes.modalButtonsMargin}
+              fullWidth
+              rel="noopener"
+              component={RouterLink}
+              variant="contained"
+              to="/dashboard"
+              color="secondary"
+            >
+              Screw that, let's jump right into this!
+            </Button>
+          </Fragment>
+        }
+      />
       <ParallaxBanner style={{ height: '100vh' }} layers={parallaxLayers} />
     </Fragment>
   );

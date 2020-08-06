@@ -23,7 +23,7 @@ const DialogComponent = ({ handleClose, open, title, actions }) => {
 
   return (
     <Dialog
-      open
+      open={open}
       TransitionComponent={TransitionComponent}
       keepMounted
       onClose={handleClose}
