@@ -1,9 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { makeStyles, Typography } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
+import { logout } from '../../store/actions';
 
 const useClasses = makeStyles((theme) => ({
   root: {
@@ -37,6 +39,7 @@ const useClasses = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useClasses();
   const userId = useSelector((state) => state.auth.userId);
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.root}>
@@ -49,7 +52,11 @@ const Footer = () => {
       <Typography variant="body2" color="textSecondary">
         &copy; Self Dashboard
       </Typography>
-      <Link className={classes.link} to={userId ? '/' : '/auth'}>
+      <Link
+        onClick={() => userId && dispatch(logout())}
+        className={classes.link}
+        to={userId ? '/' : '/auth'}
+      >
         <ExitToAppIcon fontSize="small" className={classes.icon} />
         <Typography variant="body2" color="textSecondary">
           {userId ? 'Log out' : 'Log in'}

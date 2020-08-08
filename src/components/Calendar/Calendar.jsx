@@ -38,7 +38,7 @@ const Calendar = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadAppointments({ userId, token }));
+    userId && dispatch(loadAppointments({ userId, token }));
   }, [dispatch, token, userId]);
 
   const commitChanges = ({ added, changed, deleted }) => {

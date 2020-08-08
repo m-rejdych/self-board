@@ -3,11 +3,17 @@ import {
   makeStyles,
   Dialog,
   DialogActions,
+  DialogContent,
   DialogTitle,
   Slide,
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
+  content: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   actions: {
     display: 'flex',
     flexDirection: 'column',
@@ -18,7 +24,7 @@ const TransitionComponent = React.forwardRef((props, ref) => (
   <Slide direction="up" ref={ref} {...props} />
 ));
 
-const DialogComponent = ({ handleClose, open, title, actions }) => {
+const DialogComponent = ({ handleClose, open, title, actions, content }) => {
   const classes = useStyles();
 
   return (
@@ -29,6 +35,7 @@ const DialogComponent = ({ handleClose, open, title, actions }) => {
       onClose={handleClose}
     >
       <DialogTitle>{title}</DialogTitle>
+      <DialogContent className={classes.content}>{content}</DialogContent>
       <DialogActions disableSpacing className={classes.actions}>
         {actions}
       </DialogActions>
