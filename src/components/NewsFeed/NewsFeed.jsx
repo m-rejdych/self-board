@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   searchBar: {
     width: '60%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   inputAdornment: {
     cursor: 'pointer',
@@ -85,7 +88,7 @@ const NewsFeed = () => {
         </Grid>
       ) : (
         news.map(({ author, url, urlToImage, publishedAt, description }) => (
-          <Grid key={url} item xs={4}>
+          <Grid key={url} item xs={12} sm={6} md={4}>
             <Link className={classes.singleNewsLink} target="_blank" href={url}>
               <SingleNews
                 imgUrl={urlToImage}

@@ -17,6 +17,7 @@ import {
   Toolbar,
   ViewSwitcher,
   AllDayPanel,
+  DragDropProvider,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { CircularProgress, Box } from '@material-ui/core';
 
@@ -28,6 +29,8 @@ import {
   deleteAppointment,
 } from '../../store/actions';
 import Snackbar from '../UI/Snackbar';
+
+const SHIFT_KEY = 16;
 
 const Calendar = () => {
   const appointments = useSelector((state) => state.calendar.appointments);
@@ -64,6 +67,7 @@ const Calendar = () => {
         const changedApointment = changed[appointment.id]
           ? { ...appointment, ...changed[appointment.id] }
           : appointment;
+
         userId &&
           changed[changedApointment.id] &&
           dispatch(
@@ -74,10 +78,11 @@ const Calendar = () => {
     }
 
     if (deleted !== undefined) {
-      userId && dispatch(deleteAppointment({ id: deleted, token }));
       newAppointments = appointments.filter(
         (appointment) => appointment.id !== deleted,
       );
+
+      userId && dispatch(deleteAppointment({ id: deleted, token }));
     }
 
     userId || dispatch(updateCalendar(newAppointments));
@@ -108,6 +113,7 @@ const Calendar = () => {
         <AppointmentTooltip showDeleteButton showCloseButton showOpenButton />
         <AppointmentForm />
         <ConfirmationDialog />
+        <DragDropProvider />
         <Toolbar />
         <ViewSwitcher />
       </Scheduler>
