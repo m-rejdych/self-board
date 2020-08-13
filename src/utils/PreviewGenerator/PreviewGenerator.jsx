@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, useMediaQuery } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
 
 import PreviewDivider from '../../components/UI/PreviewDivider';
@@ -39,15 +39,18 @@ const PreviewGenerator = ({
   subHeaderText,
 }) => {
   const classes = useStyles();
+  const xs = useMediaQuery((theme) => theme.breakpoints.down('xs'));
 
   return (
     <div id={id} className={classes.root}>
       <PreviewDivider title={title} />
       <div className={classes.container}>
-        <Parallax x={[-20, 0]}>
-          <SvgIcon className={classes.icon} />
-        </Parallax>
-        <Parallax x={[20, 0]}>
+        {xs || (
+          <Parallax x={[-20, 0]}>
+            <SvgIcon className={classes.icon} />
+          </Parallax>
+        )}
+        {xs ? (
           <div className={classes.textContainer}>
             <Typography variant="h3">
               TO{' '}
@@ -55,7 +58,17 @@ const PreviewGenerator = ({
             </Typography>
             <Typography variant="h5">{subHeaderText}</Typography>
           </div>
-        </Parallax>
+        ) : (
+          <Parallax x={[20, 0]}>
+            <div className={classes.textContainer}>
+              <Typography variant="h3">
+                TO{' '}
+                <span className={classes.textColorSecondary}>{headerText}</span>
+              </Typography>
+              <Typography variant="h5">{subHeaderText}</Typography>
+            </div>
+          </Parallax>
+        )}
       </div>
     </div>
   );
