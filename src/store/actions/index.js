@@ -30,5 +30,11 @@ export {
   deleteAppointmentSuccess,
   deleteAppointmentFail,
 } from './calendarActions';
-export { auth, authSuccess, authFail, authResetError } from './authActions';
+export {
+  auth,
+  authSuccess,
+  authFail,
+  authResetError,
+  logout,
+} from './authActions';
 export { setLoginMode } from './userActions';

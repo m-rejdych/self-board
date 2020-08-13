@@ -28,8 +28,8 @@ const DashboardTabs = () => {
   };
 
   const tabs = [
-    { id: 1, label: 'Todos', component: <Todos /> },
-    { id: 2, label: 'NewsFeed', component: <NewsFeed /> },
+    { id: 1, label: 'Todo List', component: <Todos /> },
+    { id: 2, label: 'News Feed', component: <NewsFeed /> },
     { id: 3, label: 'Calendar', component: <Calendar /> },
   ];
 

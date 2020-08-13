@@ -9,6 +9,11 @@ const authFail = (error) => ({
   type: AUTH.AUTH_FAIL,
   payload: error,
 });
-const authResetError = () => ({ type: AUTH.RESET_ERROR });
+const authResetError = () => ({
+  type: AUTH.RESET_ERROR,
+});
+const logout = () => ({
+  type: AUTH.LOGOUT,
+});
 
-export { auth, authFail, authSuccess, authResetError };
+export { auth, authFail, authSuccess, authResetError, logout };
