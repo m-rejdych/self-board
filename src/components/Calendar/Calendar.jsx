@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { Fragment, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   EditingState,
   IntegratedEditing,
   ViewState,
-} from '@devexpress/dx-react-scheduler';
+} from "@devexpress/dx-react-scheduler";
 import {
   WeekView,
   DayView,
@@ -18,8 +18,8 @@ import {
   ViewSwitcher,
   AllDayPanel,
   DragDropProvider,
-} from '@devexpress/dx-react-scheduler-material-ui';
-import { CircularProgress, Box } from '@material-ui/core';
+} from "@devexpress/dx-react-scheduler-material-ui";
+import { CircularProgress, Box } from "@material-ui/core";
 
 import {
   updateCalendar,
@@ -27,10 +27,8 @@ import {
   loadAppointments,
   updateAppointment,
   deleteAppointment,
-} from '../../store/actions';
-import Snackbar from '../UI/Snackbar';
-
-const SHIFT_KEY = 16;
+} from "../../store/actions";
+import Snackbar from "../UI/Snackbar";
 
 const Calendar = () => {
   const appointments = useSelector((state) => state.calendar.appointments);
@@ -58,7 +56,7 @@ const Calendar = () => {
             userId,
             id: newAppointmentId,
             appointment: added,
-          }),
+          })
         );
     }
 
@@ -71,7 +69,7 @@ const Calendar = () => {
         userId &&
           changed[changedApointment.id] &&
           dispatch(
-            updateAppointment({ appointment: changedApointment, token }),
+            updateAppointment({ appointment: changedApointment, token })
           );
         return changedApointment;
       });
@@ -79,7 +77,7 @@ const Calendar = () => {
 
     if (deleted !== undefined) {
       newAppointments = appointments.filter(
-        (appointment) => appointment.id !== deleted,
+        (appointment) => appointment.id !== deleted
       );
 
       userId && dispatch(deleteAppointment({ id: deleted, token }));
