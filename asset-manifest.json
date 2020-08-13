@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Self-Board/static/js/main.24d84c1b.chunk.js",
-    "main.js.map": "/Self-Board/static/js/main.24d84c1b.chunk.js.map",
+    "main.js": "/Self-Board/static/js/main.ccc3ed53.chunk.js",
+    "main.js.map": "/Self-Board/static/js/main.ccc3ed53.chunk.js.map",
     "runtime-main.js": "/Self-Board/static/js/runtime-main.98ccc893.js",
     "runtime-main.js.map": "/Self-Board/static/js/runtime-main.98ccc893.js.map",
     "static/js/2.a286f279.chunk.js": "/Self-Board/static/js/2.a286f279.chunk.js",
     "static/js/2.a286f279.chunk.js.map": "/Self-Board/static/js/2.a286f279.chunk.js.map",
     "index.html": "/Self-Board/index.html",
-    "precache-manifest.7532d240a522d211ae7cc57183e086be.js": "/Self-Board/precache-manifest.7532d240a522d211ae7cc57183e086be.js",
+    "precache-manifest.88103ab2ffdb8ede44d22519d44972a1.js": "/Self-Board/precache-manifest.88103ab2ffdb8ede44d22519d44972a1.js",
     "service-worker.js": "/Self-Board/service-worker.js",
     "static/js/2.a286f279.chunk.js.LICENSE.txt": "/Self-Board/static/js/2.a286f279.chunk.js.LICENSE.txt",
     "static/media/CalendarSvg.30cf3550.svg": "/Self-Board/static/media/CalendarSvg.30cf3550.svg",
@@ -19,6 +19,6 @@
   "entrypoints": [
     "static/js/runtime-main.98ccc893.js",
     "static/js/2.a286f279.chunk.js",
-    "static/js/main.24d84c1b.chunk.js"
+    "static/js/main.ccc3ed53.chunk.js"
   ]
 }
