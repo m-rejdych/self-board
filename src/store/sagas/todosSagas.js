@@ -8,6 +8,8 @@ import {
   loadTodosFail,
   deleteTodosSuccess,
   deleteTodosFail,
+  patchCheckTodoSuccess,
+  patchCheckTodoFail,
 } from '../actions';
 import { TODOS } from '../constans';
 
@@ -15,6 +17,7 @@ function* handlePostTodo({ payload: { token, userId, todo } }) {
   try {
     yield axios.put(`/todos/${todo.id}.json?auth=${token}`, {
       todo: todo.todo,
+      checked: todo.checked,
       userId,
     });
     yield put(postTodoSuccess(todo));
@@ -31,6 +34,7 @@ function* handleLoadTodos({ payload: { userId, token } }) {
     const todos = keys.map((key) => ({
       id: key,
       todo: response.data[key].todo,
+      checked: response.data[key].checked,
     }));
     yield put(loadTodosSuccess(todos));
   } catch (error) {
@@ -47,6 +51,15 @@ function* handleDeleteTodo({ payload: { id, token } }) {
   }
 }
 
+function* handlePatchCheckTodo({ payload: { checked, id, token } }) {
+  try {
+    yield axios.patch(`/todos/${id}.json?auth=${token}`, { checked });
+    yield put(patchCheckTodoSuccess({ checked, id }));
+  } catch (error) {
+    yield put(patchCheckTodoFail(error.message));
+  }
+}
+
 function* setPostTodo(action) {
   yield takeEvery(TODOS.POST_TODO, handlePostTodo);
 }
@@ -59,4 +72,8 @@ function* setDeleteTodo(action) {
   yield takeEvery(TODOS.DELETE_TODO, handleDeleteTodo);
 }
 
-export { setPostTodo, setLoadTodos, setDeleteTodo };
+function* setPatchCheckTodo(action) {
+  yield takeEvery(TODOS.PATCH_CHECK_TODO, handlePatchCheckTodo);
+}
+
+export { setPostTodo, setLoadTodos, setDeleteTodo, setPatchCheckTodo };

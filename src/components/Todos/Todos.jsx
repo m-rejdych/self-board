@@ -44,7 +44,8 @@ const Todos = () => {
     if (inputValue) {
       const todo = {
         todo: inputValue,
-        id: `id-${Math.floor(Math.random() * 10000)}`,
+        id: `id-${Math.floor(Math.random() * 1000000)}`,
+        checked: false,
       };
       userId
         ? dispatch(postTodo({ todo, userId, token }))
@@ -53,22 +54,20 @@ const Todos = () => {
     }
   };
 
-  const handleEnterPress = (event) => {
-    if (event.key === 'Enter') {
-      handleClick();
-    }
+  const textFieldProps = {
+    fullWidth: true,
+    value: inputValue,
+    label: 'New Todo',
+    type: 'text',
   };
 
   return (
     <Fragment>
       <div className={classes.root}>
         <TextField
-          fullWidth
-          value={inputValue}
+          {...textFieldProps}
           onChange={(event) => setInputValue(event.target.value)}
-          label="New Todo"
-          type="text"
-          onKeyPress={(event) => handleEnterPress(event)}
+          onKeyPress={(event) => event.key === 'Enter' && handleClick()}
         />
         <AddBoxIcon
           onClick={handleClick}
@@ -77,9 +76,9 @@ const Todos = () => {
         />
       </div>
       <Divider />
-      {todos.map(({ todo, id }) => (
-        <Todo key={id} id={id} label={todo} />
-      ))}
+      {todos.map(({ todo, id, checked }) => {
+        return <Todo key={id} id={id} label={todo} checked={checked} />;
+      })}
       {loading && (
         <Box display="flex" justifyContent="center">
           <CircularProgress size={100} />

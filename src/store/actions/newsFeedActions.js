@@ -1,7 +1,8 @@
 import { NEWS_FEED } from '../constans';
 
-const loadNews = () => ({
+const loadNews = (search='') => ({
   type: NEWS_FEED.LOAD_NEWS,
+  payload: search,
 });
 
 const loadNewsSuccess = (newsFeed) => ({
