@@ -24,4 +24,4 @@ This is an app made with React. It's main features are: todo list, news feed and
 - react-scroll
 - react-scroll-parallax
 
-**[See the app](https://m-rejdych.github.io/Self-Board)**
+**[See the app](https://m-rejdych.github.io/Self-Board/)**
